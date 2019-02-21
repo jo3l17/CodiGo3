@@ -1,0 +1,7 @@
+/* tr :nth-child(odd){
+    color: green;
+    background-color: blue 
+} */
+table th:nth-child(odd), table td:nth-child(odd){
+    color: aquamarine;
+}
