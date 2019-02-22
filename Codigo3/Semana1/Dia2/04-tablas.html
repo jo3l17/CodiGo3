@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>tablas</h1>
+    <h3>tabla simple</h3>
+    <hr />
+    <!-- tr=filas de tabla td = columnas th=cabecera de la columna-->
+    <!-- thead y tbody y tfoot es para ayudar en la estructura -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Mes</th>
+                <th>Ahorro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Enero</td>
+                <td>S/. 3500.00</td>
+            </tr>
+            <tr>
+                <td>Febrero</td>
+                <td>S/. 400.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><b>TOTAL</b></td>
+                <td>S/. 3900.00</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- codigo: hr+h3{tabla con celdas combinadas}+table>tr*4>td*5{texto aleatorio} -->
+    <hr />
+    <h3>tabla con celdas combinadas</h3>
+    <table border="1">
+        <tr>
+            <!-- colspan = lo que abarca una cabecera (juntar columnas)-->
+            <th colspan="2">cabecera</th>
+            <th>cabecera</th>
+            <th colspan="2">cabecera</th>
+        </tr>
+        <tr>
+            <!-- rowspan lo que abarca una fila (juntar filas) -->
+            <td rowspan="3">Grupo</td>
+            <td>texto aleatorio</td>
+            <td>texto aleatorio</td>
+            <td>texto aleatorio</td>
+            <td rowspan="3">
+                <img src="../Dia1/Captura.PNG" alt="captura de pantalla" width="200">
+            </td>
+        </tr>
+        <tr>
+            <td>texto aleatorio</td>
+            <td rowspan="2">fila agrupada 1</td>
+            <td>texto aleatorio</td>
+        </tr>
+        <tr>
+            <td>texto aleatorio</td>
+            <td>texto aleatorio</td>
+        </tr>
+    </table>
+</body>
+
+</html>

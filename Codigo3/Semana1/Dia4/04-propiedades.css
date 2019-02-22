@@ -1,0 +1,42 @@
+@font-face{
+    font-family: "custom";
+    src: url(./fonts/Authentic\ Script\ Rough.ttf)
+}
+
+#fontfamily{
+    font-family: cursive;
+}
+#fontsize{
+    font-size: 25px;
+}
+#fontweight{
+    font-weight: 600;
+}
+#fontstyle{
+    font-style: italic;
+}
+#font{
+    font: bold 24px arial,sans-serif;
+}
+#textalign{
+    text-align: right;
+}
+#textindent{
+    text-indent: 10px;
+}
+#letterspacing{
+    letter-spacing: 10px;
+}
+#wordspacing{
+    word-spacing: 8px;
+}
+#lineheight{
+    line-height: 25px;
+}
+#textdecoration{
+    text-decoration: none;
+}
+#customfont{
+    font-family: "custom";
+    user-select: none;
+}

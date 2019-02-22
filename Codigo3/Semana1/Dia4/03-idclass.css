@@ -1,0 +1,73 @@
+/* todos los elementos con id unparrafo */
+#unparrafo {
+    color: blue;
+    font-size: 20px;
+}
+/* todos los elementos con clase vparrafos */
+.vparrafos {
+    color: peru;
+    font-size: 30px;
+}
+
+.otraclase {
+    color: blue;
+}
+
+/* todos los hijos de section  en cualquier nivel que tengan la clase: otraclase */
+section .otraclase {
+    color: crimson;
+}
+/* todos los elementos span que sean
+hijos en cualquier nivel de los elementos 
+que tengan la clase otraclase */
+.otraclase span {
+    color: violet;
+}
+div.otraclase {
+    color: green;
+}
+
+#miseccion{
+    border: 1px solid red;
+}
+/* todos los parrafos que tengan el atributo name */
+p[name] {
+    color: chocolate;
+}
+p[name="parrafo1"]{
+    color: blue;
+    /* atributo no valido igual se puede usar para identificar */
+}p[asd="2"]{
+    color: red;
+}
+/* pseudoclases */
+/* nth-child(#) aplica el estilo al elemento que ocupa la
+poscicion dad entre todos sus similares */
+/* la cuenta inicia en 1 */
+#tabla1 tr:nth-child(1){
+    color: maroon;
+    font-size: 25px;
+}
+/* tr:nth-child(2){
+    color: violet;
+    font-size: 25px;
+} */
+/* odd=>impares */
+#tabla2 tr:nth-child(odd){
+    background-color: gray;
+}
+/* even=> pares */
+#tabla2 tr:nth-child(even){
+    background-color: wheat;
+}
+/* los impares de cada uno de los grupos obtienen
+ese atributo cuando la tabla tiene divisiones
+de thead tbody y tfoot*/
+#tabla3 tr:nth-child(odd){
+    background-color: yellowgreen;
+}
+/* todos los div excepto los que tengan
+la clase 'otra clase' */
+div:not(.otraclase){
+    font-size: 40px;
+}

@@ -1,0 +1,99 @@
+<!-- Tipo de documento HTML5 -->
+<!DOCTYPE html>
+<!-- html -->
+<html>
+
+<!-- aqui va el contenido -->
+<head>
+	<!-- parte no visual (configuracion) etiqueta head -->
+	<!-- titulo de la pestaña etiqueta tittle -->
+	<title> Mi primera Web </title>
+	<!-- METADATA o configuracion para el navegador y motores de busqueda (etiqueta meta) -->
+	<!-- Configuracion de caracteres -->
+	<!-- sharset=atributo utf-8= valor -->
+	<meta charset="utf-8"/>
+	<!-- descripcion de la pagina para que el navegador indexe -->
+	<meta name="description" content="esta es una pagina de ventas"/>
+	<!-- ayuda con la busqueda de nuestra pagina -->
+	<meta name="keywords" content="calzados, zapatillas, zapatos">
+
+
+</head>
+<body>
+	<!-- parte visual -->
+	<!-- cabecera logo -->
+	<!-- etiquetas globales id y class -->
+	<!-- id: identificador unico de etiqueta no debe haber 2 identificadores id iguales -->
+	<!-- class: identificador de un grupo o elemento -->
+	<header id="cabecera" class="">
+		<h1>logo o titulo de la pagina</h1>
+	</header>
+	<nav id="" class="">
+		<!-- ./ = ruta actual del archivo en que nos encontramos -->
+		<!-- enlaces -->
+		<!-- target _self=misma pagina _blank=nueva pagina -->
+		<a href="http://www.google.com">Home</a> | <a href="./productos.html">Productos</a> | <a href="./contacto/contacto.html">Contacto</a> | <a href="../ejemplo.html" target="_blank"> Ejemplo de H's </a> | <a href="#footer"> Al footer</a> | <a href="./02-imagenes.html">imagenes</a>
+		<!-- #=relacionado al id .=relacionado al class -->
+	</nav>
+	<main id="" class="">
+		<section id="noticias">
+			<em>Enfasis aqui</em> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut <strong>strong aqui</strong> magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco <b>bold aqui</b> laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in <i>expresion</i> reprehenderit in voluptate velit esse
+			cillum <u>subrayado aqui</u> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			<article>
+				texto del articulo 1
+			</article>
+			<article>
+				texto del articulo 2
+			</article>
+		</section>
+		<section>
+			
+		</section>
+		<section>
+			
+			<!-- caja que puede reemplazar cualquier elemento
+				atajo div*3 div.libro*5 -->
+				<!-- div.libro#libro1*5>div.minilibro -->
+
+				<div class="libros">Libro: Libro1</div>
+				<div class="libros">Libro: Libro2</div>
+				<div class="libros">Libro: Libro3</div>
+
+			</section>
+			<section>
+				<!-- ayuda al buscador a saber la fecha -->
+				<time datetime="2019-02-18">Arequipa 18 de febrero del 2019</time>
+				<br/>
+				<!-- etiqueta para representar codigo -->
+				<code>
+					var x = 9;
+				</code>
+
+			</section>
+			<aside>
+				<!-- <p> etiqueta de parrafo -->
+					<p>Cita del articulo 1</p>
+					<br/>
+					<br/>
+					<p>Cita del articulo 2</p>
+					<pre>
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					</pre>
+			</aside>
+	</main>
+		<footer id="footer">
+			Codigo 2019 - Tecsup - Arequipa - Peru
+			<a href="#cabecera">Ir arriba</a>
+		</footer>
+
+	</body>
+</html>
+
+<!-- atajos:ctrl + d = seleccionar misma palabra en diferentes partes del codigo

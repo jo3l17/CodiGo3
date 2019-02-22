@@ -1,0 +1,34 @@
+/* selector de etiqueta */
+/* todos los elementos de la pagina */
+* {
+    color: blueviolet;
+}
+/* todos los 'section' */
+/* section {
+    font-size: 40px
+} */
+/* todos los 'p' */
+/* p {
+    font-size: 100px
+} */
+/* todos los 'p' y todos los 'span' */
+/* p, span {
+    color: red;
+} */
+/* todos los 'span' que sean hijos en cualquier nivel de un 'p'
+ */
+p span {
+    color: blue;
+}
+/* todos los 'p' que sean hijos directos del 'section'
+ */
+section > p {
+    color: green
+}
+/* todos los 'p' que esten precedidos directamente por un h1 */
+h1 + p {
+    color: orangered
+}
+
+
+

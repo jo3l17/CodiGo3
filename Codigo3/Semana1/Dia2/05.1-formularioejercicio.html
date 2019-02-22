@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <H1>registro de compra</H1>
+    <hr>
+    <form action="../datos.html" method="POST">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="nombre"><b>Nombre</b></label>
+                    </td>
+                    <td>
+                        <input  type="text"
+                                name="nombre"
+                                id="nombre"
+                                minlength="3"
+                                maxlength="14"
+                                required>
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            <label for="direccion">Direccion</label>
+                        </td>
+                        <td>
+                            <input  type="text"
+                                    name="direccion"
+                                    id="direccion"
+                                    minlength="10"
+                                    required>
+                        </td>
+                </tr>
+                <tr>
+                        <td>
+                            <label for="direccion">Distrito</label>
+                        </td>
+                        <td>
+                            <select name="distrito" id="distrito">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="1">Miraflores</option>
+                                    <option value="2">Paucarpata</option>
+                                    <option value="3">Cayma ENACE</option>
+                            </select>
+                        </td>
+                </tr>
+                <tr>
+                            <td>
+                                <label for="Card">Tarjeta</label>
+                            </td>
+                            <td>
+                                <input  type="number"
+                                        name="Card"
+                                        id="Card"
+                                        minlength="16"
+                                        maxlength="16"
+                                        placeholder="XXXX XXXX XXXX XXXX"
+                                        required>
+                            </td>
+                </tr>
+                <tr>
+                        <td>
+                        <label for="debito">Debito</label>
+                        <input type="radio" name="card" id="card" value="debito" checked>
+                        </td>
+                        <td>
+                        <label for="credito">Credito</label>
+                        <input type="radio" name="card" id="card" value="credito">
+                        </td>
+                </tr>
+
+                <tr>
+                        <td>
+                            <label for="celular">Celular</label>
+                        </td>
+                        <td>
+                            <input  type="number"
+                                    name="celular"
+                                    id="celular"
+                                    minlength="9"
+                                    maxlength="9"
+                                    placeholder="999 999 999"
+                                    required>
+                        </td>
+                    </tr>
+                <tr>
+                <tr>
+                            <td>
+                                <label for="email">Correo</label>
+                            </td>
+                            <td>
+                                <input  type="email"
+                                        name="email"
+                                        id="email"
+                                        minlength="10"
+                                        required>
+                            </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>recibo</h3>
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            <label for="fisico">Fisico</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="fisico" value="com" id="fisico">
+                        </td>
+                </tr>
+                <tr>
+                        <td>
+                            <label for="Virtual">Virtual</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="Virtual" value="acc" id="Virtual">
+                        </td>
+                        
+                </tr>    
+            </tbody>
+        </table>
+        <br>
+        <hr>
+        <br>
+        <input type="submit" value="procesar">
+</form>
+</body>
+</html>
