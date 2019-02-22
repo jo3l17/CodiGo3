@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'custom';
+    src: url(../Dia4/fonts/Authentic\ Script\ Rough.ttf)
+}
+#div1{
+    /* border width todos los bordes */
+    /* border-top-width: 1px;
+    border-bottom-width: 2px;
+    border-right-width: 3px;
+    border-left-width: 4px;
+    border-color: #ff0000; */
+    /* style=> solido, dotted, dashed,double, groove, ridge */
+    /* border-top-style */
+    /* border-bottom-style */
+    /* border-right-style */
+    /* border-left-style */
+    /* border-style: solid; */
+    border: 2px solid blue;
+    border-radius: 20px 10px 15px 50px;
+}
+button{
+    font-family: 'custom';
+    font-size: 10px;
+    background-color: #5ee1cd;
+    color: white;
+    border-radius: 30px;
+    border-width: 0px;
+    padding: 7px 40px;
+}

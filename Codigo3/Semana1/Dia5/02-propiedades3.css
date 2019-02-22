@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+header{
+    margin-top: 15px;
+    /* top right bottom left con 4 valores */
+    /* (top y bottom) (left y right) con 2 valores */
+    padding: 10px 20px 30px 40px;
+    border: 1px solid red;
+}
+h1{
+    border: 1px solid blue;
+    padding: 5px 15px;
+}
+main{
+    border: 1px solid green;
+    width: 700px;
+    height: 700px;
+    color: red;
+    /* repetir el patron de la imagen */
+    /* valores repeat-x | repeat-y | repeat (defecto) */
+    /* para proteger imagenes de descarga es mejor usar css que html porque asi no se epuede descargar */
+    /* background-repeat: no-repeat;
+    background-color: rgba(0, 122, 204, 0.5);
+    background-image: url('http://placehold.it/300x300'); */
+    /* resumen de background */
+    background: rgba(0, 122, 204, 0.5) url('http://placehold.it/300x300') repeat-x
+
+}
+body{
+    background-image: url('./img/textura.jpg')
+}
