@@ -1,0 +1,79 @@
+/* before iyecta un elemento antes del elemento selecionado */
+#contenido::before{
+    content: ">";
+    color: green;
+    transform: rotate(90deg);
+}
+#contenido::after{
+    content: "z";
+}
+
+header{
+    background-color: red;
+    border: 1px solid red;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+/* animation [nombre_de_animacion] [tiempo] [funcion_bezier] [delay] [nro_de_veces_a_repetir | infinite] [sentido_de_ejecucion | normal | reverse] [forma_de_finalizacion | none] */
+/* animation: mianimacion 1s ease-in-out infinite none; */
+animation-name: mianimacion;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-delay: 0;
+animation-iteration-count: 2;
+animation-direction: normal;
+animation-fill-mode: none;
+}
+
+/* para empezar una animacion se usa @keyframes */
+@keyframes mianimacion{
+    0%{
+        background-color: #ff1500;
+        text-align: left;
+    }
+    50%{
+        background-color: #9e5dac;
+        text-align: center;
+        transform: scale(1.5) rotate(360deg) 
+    }
+    100%{
+        background-color: #ff0000;
+        text-align: right;
+    }
+}
+
+#imagen{
+    animation-name: mianimacion2;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+@keyframes mianimacion2{
+    0%{
+        
+    }
+    25%{
+        transform: translate(500px,0px) scale(1.3);
+        filter: brightness(5);
+    }
+    50%{
+        transform: translate(500px,500px);
+        filter: brightness(1);
+    }
+    75%{
+        transform: translate(0px,500px) scale(1.3);
+        filter: brightness(5)
+    }
+}
+
+html{
+    font-size: 16px;
+}
+#div1{
+    /* rem=> 1 rem igual al tamaño de letra predefinido del documento */
+    font-size: 1.5rem;
+}
+/* em=>1 em igual al tamaño de letra predefinida de su padre directo */
+#parrafo{
+    font-size: 1.5em;
+}
