@@ -13,6 +13,6 @@ pero respeta sus atributos de width y height */
 div{
     border:1px solid green;
     display: inline-block;
-    width: 100px;
+    width: 50%;
     height: 100px
 }

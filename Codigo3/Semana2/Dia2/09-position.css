@@ -1,0 +1,64 @@
+.cajapadre{
+    width: 100%;
+    border: 1px solid tomato;
+    margin-top: 200px;
+    position: relative;
+}
+#caja-1{
+    position: absolute;
+    /* transform: translate(-50%,0);
+    left: 50%; */
+    bottom:0;
+    left: 20px;
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+    background-color: #ccc;
+    /* z-index=> establece el valor de profundidad
+    de un elemento */
+    z-index: 100;
+}
+#caja-2{
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+    position: relative;
+    background-color: #aaa;
+    z-index: 150;
+}
+#caja-3{
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    float: right;
+    background-color: #ccc;
+}
+#caja-4{
+    width: 140px;
+    height: 50px;
+    margin: 5px;
+    float: right;
+    background-color: #aaa;
+}
+/* atributo clear es para que los bordes de los
+float se puedan respetar */
+.clear{
+    clear:both;
+}
+#fijar{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0px;
+    height: 40px;
+    border: 1px solid red;
+}
+main{
+    margin-top:50px;
+}
+nav{
+    height: 40px;
+    box-sizing: border-box;
+}
