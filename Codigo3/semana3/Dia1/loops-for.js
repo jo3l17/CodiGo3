@@ -39,33 +39,43 @@ for(cont = 0; cont < 9; cont++){
 
 var N = parseInt(prompt("numero de ventas")),
     cont,
-    A=0,
-    B=0,
-    C=0,
+    Contvent1=0,
+    Contvent2=0,
+    Contvent3=0,
     T1=0,
     T2=0,
     T3=0,TT=0,V=0;
 for (cont=0; cont<N; cont++){
-    V = parseInt(prompt("monto de la venta"));
+    V = parseInt(prompt(`monto de la venta nro ${cont+1}`));
     switch (true) {
-        case V>1000:
-            A=A+1;
+        // se pueden colocar llaves para evitar la indentacion
+        case V>1000:{
+            Contvent1++;
             T1=T1+V;
             break;
+        }
         case V>500 && V<=1000:
-            B=B+1;
+            Contvent2++;
             T2=T2+V;
             break;
-        case V<=500:
-            C=C+1;
+        case V<=500 && V>0:
+            Contvent3++;
             T3=T3+V;
             break;
         default:
+            alert(`el valor de ${V} es incorrecto`)
+            cont--
             break;
     }
     TT=TT+V;
 }
-console.log(`Las ventas mayores a 1000 fueron ${A} y el total de ventas es:${T1}`);
-console.log(`Las ventas mayores a 500 y menores iguales a 1000 fueron ${B} y el total de ventas es:${T2}`);
-console.log(`Las ventas menores a 500 fueron ${C} y el total de ventas es:${T3}`);
+console.log(`Las ventas mayores a 1000 fueron ${Contvent1}`)
+console.log(`el total de ventas mayores a 1000 fueron ${T1}`);
+
+console.log(`Las ventas mayores a 500 y menores a 1000 fueron ${Contvent2}`)
+console.log(`el total de ventas mayores a 1000 fueron ${T2}`);
+
+console.log(`Las ventas menores a 500 fueron ${Contvent3}`)
+console.log(`el total de ventas mayores a 1000 fueron ${T3}`);
+
 console.log(`el total de ventas es ${TT}`);
