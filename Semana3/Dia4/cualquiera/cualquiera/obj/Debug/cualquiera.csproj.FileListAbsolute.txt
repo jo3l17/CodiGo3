@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\bin\Debug\cualquiera.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\bin\Debug\cualquiera.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\bin\Debug\cualquiera.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\obj\Debug\cualquiera.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\obj\Debug\cualquiera.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\obj\Debug\cualquiera.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia4\cualquiera\cualquiera\obj\Debug\cualquiera.csprojAssemblyReference.cache
