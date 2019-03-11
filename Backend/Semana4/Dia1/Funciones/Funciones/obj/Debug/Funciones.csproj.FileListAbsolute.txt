@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\bin\Debug\Funciones.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\bin\Debug\Funciones.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\bin\Debug\Funciones.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\obj\Debug\Funciones.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\obj\Debug\Funciones.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\obj\Debug\Funciones.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\Funciones\Funciones\obj\Debug\Funciones.pdb

@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\obj\Debug\ejerciciosem4dia1.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\bin\Debug\ejerciciosem4dia1.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\bin\Debug\ejerciciosem4dia1.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\bin\Debug\ejerciciosem4dia1.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\obj\Debug\ejerciciosem4dia1.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\obj\Debug\ejerciciosem4dia1.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\ejerciciosem4dia1\ejerciciosem4dia1\obj\Debug\ejerciciosem4dia1.csprojAssemblyReference.cache

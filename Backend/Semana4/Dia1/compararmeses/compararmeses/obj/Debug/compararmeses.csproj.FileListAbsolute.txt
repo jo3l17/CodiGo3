@@ -1,0 +1,6 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\compararmeses\compararmeses\bin\Debug\compararmeses.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\compararmeses\compararmeses\bin\Debug\compararmeses.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\compararmeses\compararmeses\bin\Debug\compararmeses.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\compararmeses\compararmeses\obj\Debug\compararmeses.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\compararmeses\compararmeses\obj\Debug\compararmeses.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia1\compararmeses\compararmeses\obj\Debug\compararmeses.pdb
