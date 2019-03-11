@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\bin\Debug\Arreglos.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\bin\Debug\Arreglos.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\bin\Debug\Arreglos.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\obj\Debug\Arreglos.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\obj\Debug\Arreglos.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\obj\Debug\Arreglos.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana3\Dia5\Arreglos\Arreglos\obj\Debug\Arreglos.pdb

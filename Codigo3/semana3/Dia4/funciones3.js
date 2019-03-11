@@ -27,11 +27,17 @@ console.log(`Resultado => ${sumar(sumar(3,6),sumar(7,9))}`);
 // calcule la multiplicacion de ambos sin usar el signo
 // *, solo se pueden usar sumas  y restas
 function multi(a,b){
-    var c = 0
-    for(var i=0; i<b; i++){
-    c=c+a
+    var c = 0;
+    if(b<a){
+        for(var i=0; i<b; i++){
+        c=c+a;
+    }
+    if (a<b){
+        for(var i=0; i<a; i++){
+        c=c+b; 
+    }
 }
-return c
+return c;
 }
 console.log(`resultado => ${multi(3,4)}`);
 
@@ -43,8 +49,8 @@ console.log(`resultado => ${multi(3,4)}`);
 function div(a,b) {
     var cont = 0;
     for(a ; a >= b; a-b){
-        a=a-b
-        cont++
+        a=a-b;
+        cont++;
     }
     return [cont,a];
 }
