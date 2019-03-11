@@ -27,6 +27,7 @@ var clasepersona = function(name, age, DNI, weight, height){
         console.log(`Mayor de edad => ${this.mayor}`);
     }
     }
+    return persona;
 }
 //var primeraPersona = clasepersona(prompt("ingrese nombre"),+prompt("ingrese edad"),+prompt("ingrese DNI"),+prompt("ingrese peso"),+prompt("ingrese altura en metros"));
 console.log(clasepersona(prompt("ingrese nombre"),+prompt("ingrese edad"),+prompt("ingrese DNI"),+prompt("ingrese peso"),+prompt("ingrese altura en metros")));
