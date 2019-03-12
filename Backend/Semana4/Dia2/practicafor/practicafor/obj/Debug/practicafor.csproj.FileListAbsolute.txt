@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\bin\Debug\practicafor.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\bin\Debug\practicafor.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\bin\Debug\practicafor.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\obj\Debug\practicafor.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\obj\Debug\practicafor.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\obj\Debug\practicafor.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\practicafor\practicafor\obj\Debug\practicafor.pdb

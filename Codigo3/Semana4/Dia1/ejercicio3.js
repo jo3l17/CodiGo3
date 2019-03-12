@@ -1,23 +1,23 @@
-var claseSerie = function(){
+var claseSerie = function(tittle="cualquiera", rented=true,gender="comedia",creator="Stan Lee"){
     var serie={
-        tituloprincipal:title,
-        temp= [
+        tituloprincipal:tittle,
+        temp: [
             {
-                titulo: "hola1",
+                temporada: "hola1",
                 descripcion: "hola1"
             },
             {
-                titulo: "hola2",
+                temporada: "hola2",
                 descripcion: "hola2"
             }
         ],
-        alquilado=rented,
-        genero=gender,
-        creador=creator,
+        alquilado:rented,
+        genero:gender,
+        creador:creator,
         texto: function(){
             console.log(`el titulo es ${this.tituloprincipal}`);
-            console.log(`temporadas ${this.temp[0].titulo} ${this.temp[0].descripcion}`);
-            console.log(`temporadas ${this.temp[1].titulo} ${this.temp[1].descripcion}`);
+            console.log(`temporadas ${this.temp[0].temporada} ${this.temp[0].descripcion}`);
+            console.log(`temporadas ${this.temp[1].temporada} ${this.temp[1].descripcion}`);
         },
         alquiler: function(){
             if (this.alquilado==true) {
@@ -27,10 +27,12 @@ var claseSerie = function(){
                 console.log("alquilado");
             }
         },
-        verInfoTemp: function(a){
-            console.log(`Temporada ${a-1} descripcion ${this.temp[a-1].descripcion}`);
-            
+        verInfoTemp: function(a=1){
+            console.log(`Temporada ${a} descripcion ${this.temp[a-1].descripcion}`);
         }
     }
     return serie;
 }
+claseSerie().verInfoTemp(1);
+claseSerie().alquiler();
+claseSerie().texto();
