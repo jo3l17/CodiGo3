@@ -62,7 +62,7 @@ document.write(`<b> ejercicio 4 </b>`);
 
 document.write(`<b> ejercicio 5 </b>`);
 var cadenaej5 = "Hola mundo hola asead hola mundo asdsade hola asad";
-var cadenaCapitalizada = new Array (cadenaej5.length);
+var cadenaCapitalizada = new Array (cadenaej5.length)         ;
 var busqueda=" "
 for (let i = 0; i < cadenaej5.length; i++) {
     if (cadenaej5.substr(i,busqueda.length)==busqueda) {

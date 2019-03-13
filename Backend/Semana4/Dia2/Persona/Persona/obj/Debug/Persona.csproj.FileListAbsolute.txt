@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\obj\Debug\Persona.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\obj\Debug\Persona.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\bin\Debug\Persona.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\bin\Debug\Persona.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\bin\Debug\Persona.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\obj\Debug\Persona.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana4\Dia2\Persona\Persona\obj\Debug\Persona.pdb
