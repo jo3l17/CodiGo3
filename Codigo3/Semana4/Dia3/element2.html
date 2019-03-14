@@ -6,15 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>element2</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         p{
             color:red;
+        }
+        main{
+            width: 80%;
+            margin: auto;
+            border: 1px solid tomato;
+            padding: 15px;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+        }
+        li a:hover{
+            color:#34efeb;
+            background: blue;
+        }
+        li a{
+            text-decoration: none;
+            color: blue;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 10px;
+        }
+        nav{
+            background-color: #34efeb;
+            margin-bottom: 1em;
+            padding: 10px;
+        }
+        a{
+            padding: 10px;
+        }
+        .active{
+            color:#34efeb;
+            background-color: blue;
+        }
+        table{
+            border: 1px;
+            margin: auto;
+        }
+        section{
+            margin: 10px auto;
+            width: 90%;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="" class = "active">Home</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </nav>
     <main id="principal">
 
     </main>
+    <section id = "MiSeccion">
+
+    </section>
 
     <script src="./element2.js"></script>
 </body>
