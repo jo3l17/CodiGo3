@@ -102,9 +102,15 @@ namespace Persona
             Console.WriteLine($"la hipotenusa es {_hipotenusa}");
         }
     }
-    class trabajador : Persona
+    class Trabajador : Persona
     {
+        int sueldo;
 
+        public Trabajador(string DNI, string nombre, int edad, char estadoCivil,
+            int sueldo) : base(DNI,nombre,edad,estadoCivil)
+        {
+
+        } 
     }
     class Persona
     {
@@ -115,13 +121,13 @@ namespace Persona
         char _estadoCivil;
 
         //CONSTRUCTORES
-        /*public Persona(string DNI,string nombre, int edad, char estadoCivil)
+        public Persona(string DNI,string nombre, int edad, char estadoCivil)
         {
             _DNI = DNI;
             _nombre = nombre;
             _edad = edad;
             _estadoCivil = estadoCivil;
-        }*/
+        }
         //MÉTODOS (ACCIONES QUE REALIZA UN OBJETO)
         void comer(string comida)
         {
