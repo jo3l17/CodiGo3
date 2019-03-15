@@ -74,7 +74,7 @@ namespace Persona
                 Console.ReadLine();
                 Console.WriteLine(nombre[frase.Next(nombre.Length)] + apellido[frase.Next(apellido.Length)] + estudio[frase.Next(apellido.Length)] + opinion[frase.Next(opinion.Length)]);
             }*/
-            trabajador a = new trabajador();
+            Trabajador a = new Trabajador();
             
 
         }
