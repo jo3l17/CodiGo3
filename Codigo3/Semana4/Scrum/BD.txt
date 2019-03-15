@@ -1,0 +1,3 @@
+dni nombres apellidos cuenta monto moneda
+23469212 juan_torres 215-7623-12,9800 S
+44363212 luis_manrrique medina 215-2313-18 35210 D
