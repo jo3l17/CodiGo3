@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\bin\Debug\AutorLibro.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\bin\Debug\AutorLibro.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\bin\Debug\AutorLibro.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\obj\Debug\AutorLibro.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\obj\Debug\AutorLibro.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\obj\Debug\AutorLibro.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Codigo3\Semana5\back\AutorLibro\AutorLibro\obj\Debug\AutorLibro.pdb
