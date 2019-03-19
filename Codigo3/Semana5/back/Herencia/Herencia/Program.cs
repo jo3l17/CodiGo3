@@ -14,7 +14,7 @@ namespace Herencia
             //se deben enviar argumentos acorde con el constructor
             AutorDePeriodico dePeriodico = new AutorDePeriodico("Jhon", "Smith", "js@gmail.com", "The New York Times");
             Console.WriteLine(dePeriodico.ObtenerPeriodico());*/
-            FiguraGeometrica miFigura = new FiguraGeometrica("azul");
+            /*FiguraGeometrica miFigura = new FiguraGeometrica("azul");
             Console.WriteLine(miFigura.GScolor);
             //miFigura.GScolor = "verde";
             //Console.WriteLine(miFigura.GScolor);
@@ -35,7 +35,11 @@ namespace Herencia
 
             triangulo miTriangulo = new triangulo("verde", 6, 8);
             Console.WriteLine(miTriangulo.obtenerArea());
-            Console.WriteLine(miTriangulo.obtenerPerimetro());
+            Console.WriteLine(miTriangulo.obtenerPerimetro());*/
+
+            //FiguraGeometrica miFigura = new FiguraGeometrica("azul", 3);
+            rectangulo rectanguloOBJ = new rectangulo("verde", 4, 3);
+            Console.WriteLine(rectanguloOBJ.obtenerArea());
         }
     }
     class Autor
@@ -74,9 +78,10 @@ namespace Herencia
             return _periodico;
         }
     }
-    class FiguraGeometrica
+    //CLASE ABSTRACTA - CLASE INCOMPLETA
+    abstract class FiguraGeometrica
     {
-        string _color;
+        protected string _color;
 
         public FiguraGeometrica(string color)
         {
@@ -98,16 +103,8 @@ namespace Herencia
             }
         }
 
-        public virtual double obtenerArea()
-        {
-            Console.WriteLine("Area de la figura");
-            return 0;
-        }
-        public virtual double obtenerPerimetro()
-        {
-            Console.WriteLine("perimetro de la figura");
-            return 0;
-        }
+        abstract public double obtenerArea();
+        abstract public double obtenerPerimetro();
     }
     class cuadrado: FiguraGeometrica
     {
@@ -132,6 +129,8 @@ namespace Herencia
         {
             _radio = radio;
         }
+        //metdos abstractos es clase padre deben ser implementados obligatoriamente
+        //en las clases hijas
         public override double obtenerArea()
         {
             return Math.PI * Math.Pow(_radio, 2);
@@ -152,6 +151,7 @@ namespace Herencia
         }
         public override double obtenerArea()
         {
+            
             return _Base * _altura;
         }
         public override double obtenerPerimetro()

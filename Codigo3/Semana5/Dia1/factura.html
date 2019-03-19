@@ -5,22 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Factura</title>
     <script src="./factura.js"></script>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        div{
-            width: 40%;
-            padding-left: 30%;
-            padding-right: 30%;
+
+        body{
+            background: #00F260;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        div {
+            width: 90%;
             text-align: center;
             margin: 40px;
         }
-        table{
-            border:1px solid green;
+
+        table {
+            width: 90%;
+            text-align: center;
+            margin: auto;
+            border-collapse: collapse;
+            background: #0575E6;
+        }
+        table td, table th{
+            border: 1px solid #00F260;
+            
         }
     </style>
 </head>
@@ -28,34 +42,45 @@
 <body>
     <div id="div 1">
         <form action="">
-            <label for="nombre" id="inputNombre">Nombre</label>
-            <input type="text">
-            <label for="RUC" id="inputRUC">RUC</label>
-            <input type="number">
-            <label for="fecha" id="inputFecha">fecha</label>
-            <input type="date">
+            <label for="nombre" >Nombre</label>
+            <input type="text" id="inputNombre">
+            <label for="RUC" >RUC</label>
+            <input type="number" id="inputRUC">
+            <label for="fecha" >fecha</label>
+            <input type="date" id="inputFecha">
         </form>
     </div>
     <div id="div 2">
-        <input type="number" id = "inputCant"placeholder="Cantidad">
-        <input type="text" id = "inputDesc" placeholder="Descripcion">
+        <input type="number" id="inputCant" placeholder="Cantidad">
+        <input type="text" id="inputDesc" placeholder="Descripcion">
         <select name="" id="inputCategoria">
-            <option value="e">Electro</option>
-            <option value="c">Computo</option>
-            <option value="r">Ropa</option>
+            <option value="">selecione una opcion</option>
+            <option value="Electro">Electro</option>
+            <option value="Computo">Computo</option>
+            <option value="Ropa">Ropa</option>
         </select>
         <input type="number" name="" id="inputPunit" placeholder="P.Unit">
-        <button id = "btnAgregar">agregar</button>
+        <button id="btnAgregar">agregar</button>
     </div>
     <div id="div 3">
-        <table id = "miTabla">
-            <tr>
-                <th>Nro</th>
-                <th>Cantidad</th>
-                <th>Descripcion</th>
-                <th>P.unit</th>
-                <th>Sub Total</th>
-            </tr>
+        <table >
+            <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>Cantidad</th>
+                    <th>Descripcion</th>
+                    <th>P.unit</th>
+                    <th>Sub Total</th>
+                </tr>
+            </thead>
+            <tbody id="miBody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"><b>Total</b></td>
+                    <td id ="totalFinal"></td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </body>
