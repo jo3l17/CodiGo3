@@ -74,8 +74,9 @@ input[type="submit"]{
 input[type="submit"]:hover{
     cursor: pointer;
     background-color: #a8ff78;
-    margin-top: 25px;
-    margin-bottom: 35px;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.3);
 }
 a{
     text-decoration: none;

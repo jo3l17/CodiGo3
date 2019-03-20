@@ -11,6 +11,7 @@
         * {
             margin: 0;
             padding: 0;
+            font-family:Arial, Helvetica, sans-serif;
         }
 
         body{
@@ -24,7 +25,40 @@
             text-align: center;
             margin: 40px;
         }
-
+        input{
+            background-color: rgba(255, 255, 255, 0.5);
+            border:none;
+            outline: none;
+            border-bottom: 1px solid blue;
+            color:white;
+            padding: 5px;
+        }
+        select{
+            background-color: rgba(255, 255, 255, 0.5);
+            border:none;
+            outline: none;
+            border-bottom: 1px solid blue;
+            color:white;
+            padding: 5px;
+        }
+        select option{
+            background: rgba(255, 255, 255, 0.1);
+            color: green;
+        }
+        label{
+            color:white;
+        }
+        button{
+            background-color: rgba(255, 255, 255, 0.5);
+            border:none;
+            outline: none;
+            color:white;
+            padding: 5px;
+        }
+        button:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+            cursor:pointer;
+        }
         table {
             width: 90%;
             text-align: center;
@@ -36,6 +70,12 @@
             border: 1px solid #00F260;
             
         }
+        table tbody tr:nth-child(odd){
+            background-color: rgba(0, 110, 255, 0.404)
+        }
+        table tbody tr:nth-child(even){
+            background-color: rgba(121, 255, 68, 0.404)
+        }
     </style>
 </head>
 
@@ -43,9 +83,9 @@
     <div id="div 1">
         <form action="">
             <label for="nombre" >Nombre</label>
-            <input type="text" id="inputNombre">
+            <input type="text" id="inputNombre" required>
             <label for="RUC" >RUC</label>
-            <input type="number" id="inputRUC">
+            <input type="number" id="inputRUC" required>
             <label for="fecha" >fecha</label>
             <input type="date" id="inputFecha">
         </form>
