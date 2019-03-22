@@ -1,0 +1,6 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana5\Dia5\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana5\Dia5\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana5\Dia5\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana5\Dia5\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana5\Dia5\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana5\Dia5\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
