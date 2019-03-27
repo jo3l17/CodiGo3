@@ -1,0 +1,56 @@
+//variables
+$naranja:#FFA500;
+$grande:1.3rem;
+$dark:#343a40;
+
+
+//herencia de estilos
+%flotar{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px gray;
+}
+
+//funciones
+@mixin girar($grados){
+    transform: rotate($grados) scale(0);
+    -webkit-transform: rotate($grados) scale(0);
+}
+
+.naranja{
+    color:$naranja;
+}
+.texto-grande{
+    font-size: $grande;
+}
+.linea-naranja{
+    width: 100%;
+    background-color: $naranja;
+    height: 3px;
+}
+.media i{
+    color: $dark;
+    transition: 1s;
+    //llamando a una funcion
+    &:hover{
+        @include girar(360deg);
+    }
+}
+.imagen{
+    transition: 0.5s;
+    img{
+        border-radius: 2px;
+    }
+    &:hover{
+        @extend %flotar;
+    }
+}
+.contacto{
+    background: url(http://placehold.it/1745x900/343a40/ffa500) no-repeat center center;
+    background-attachment: fixed;
+    height: 600px;
+    p{
+        padding: 200px 1px;
+        color: white;
+        font-size: 30px;
+    }
+}
