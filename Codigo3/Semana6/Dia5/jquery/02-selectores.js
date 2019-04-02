@@ -18,10 +18,13 @@ btnColor.click(function(){
     // estilos al elemento
     $(this).css("border-radius","10px")
     .css("padding","20px")
+    $("p").addClass("text-white")
 });
 $('#btnClases').click(function(){
+    // equivalesnte a elemento.classList.add()
     $("p:eq(0)").addClass("btn btn-primary")
                 .addClass("btn-block");
+    $("p").removeClass("text-white")
 });
 
 });
