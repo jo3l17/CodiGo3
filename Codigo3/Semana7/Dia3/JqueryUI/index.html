@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="./mijqueryui.js"></script>
+    <style>
+        .cuadrado {
+            height: 100px;
+            width: 100px;
+            background-color: peru;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .ui-sortable-helper {
+            border: 1px solid coral;
+            box-shadow: 0px 0px 8px gray;
+        }
+
+        li::before {
+            content: "guisito ";
+        }
+
+        ul {
+            width: 20%;
+            list-style: lower-roman;
+        }
+
+        .grande {
+            height: 150px;
+            width: 150px;
+            background-color: blue;
+        }
+
+        .pequenio {
+            height: 60px;
+            width: 60px;
+            background-color: darkseagreen;
+        }
+
+        .objetivo {
+            height: 150px;
+            width: 150px;
+            background-color: aquamarine;
+        }
+
+        body {
+            margin-bottom: 300px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="cuadrado">DIV 1</div>
+    <div class="cuadrado">DIV 2</div>
+    <div class="cuadrado">DIV 3</div>
+    <ul class="peliculas">
+        <li>DUMBO</li>
+        <li>Rambo</li>
+        <li>La Sirenita</li>
+        <li>Rocky</li>
+        <li>Harry Potter</li>
+    </ul>
+    <hr>
+    <div class="grande">
+
+    </div>
+    <div class="pequenio">
+
+    </div>
+    <hr>
+    <button id="btnAnimar">
+        Animar Elemento
+    </button>
+    <div class="objetivo">
+
+    </div>
+
+
+    <div class="card border-primary">
+        <img class="card-img-top" src="http://placehold.it/400px400/" alt="" id="imagen"
+            title="Puedes darle click a la imagen">
+        <div class="card-body bg-dark text-light" id="body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias pariatur ipsum
+                dignissimos deleniti, magnam fuga nulla doloremque dolor eligendi beatae quisquam asperiores et harum
+                animi maiores reprehenderit quis. Laborum, totam!</p>
+        </div>
+    </div>
+    <hr>+
+    <a name="" id="btnModal" class="btn btn-primary">abrir modal</a>
+    <div id="miModal" style="display: none">
+        <div class="card text-left">
+            <img class="card-img-top" src="http://placehold.it/400x400" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Body</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

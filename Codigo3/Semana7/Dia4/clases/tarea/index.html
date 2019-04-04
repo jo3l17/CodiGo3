@@ -1,19 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <title>Ajax</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="vehiculo.js"></script>
+    <script src="camioneta.js"></script>
+
+    <!-- Main de pruebitas -->
+    <!--script src="main.js"></script-->
+    <script src="registro.js"></script>
+    <!-- Main de playita -->
+    <script src="mainplaya.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./jquery-3.3.1.js"></script>
-    <script src="./07-ajax.js"></script>
+
+    <title>Clases</title>
 </head>
 
-<body class="bg-dark">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">CodiGo</a>
+<body class="bg-success">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -39,37 +50,43 @@
             </form>
         </div>
     </nav>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class=" card col-md-4">
-                <div class="card-body">
-                    <button class="btn btn-block btn-primary" id="btnGet">
-                        Traer Gatos(GET)
-                    </button>
-                </div>
-            </div>
-            <div class="card col-md-8">
-                <div class="car-body" id="contenido">
+            <div class="col-md-3 bg-sucess">
+                <ul class="list-group" id="listita">
+                   
+                </ul>
 
-                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class=" card col-md-4">
-                <div class="card-body">
-                    <button class="btn btn-block btn-success" id="btnPost">
-                        Enviar Datos(POST)
-                    </button>
-                </div>
-            </div>
-            <div class="card col-md-8">
-                <div class="car-body" id="contenidoPost">
+            <div class="col-md-9 bg-warning">
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="placa">Placa</label>
+                        <input type="text" class="form-control" id="placa" aria-describedby="emailHelp"
+                            placeholder="Ingrese la placa">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Categoria</label>
+                        <select class="custom-select custom-select-lg mb-3" name="categorias">
+                            <option selecte value="0">Seleccione la categoria</option>
+                            <option value="Auto">Auto</option>
+                            <option value="Camioneta">Camioneta</option>
+                            <option value="Moto">Moto</option>
+                        </select>
 
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Ingrese color">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block mb-3" id="btnRegistrar">Registrar</button>
+                </form>
             </div>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
