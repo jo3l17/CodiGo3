@@ -1,0 +1,9 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.Form1.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.csproj.GenerateResource.cache

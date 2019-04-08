@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\bin\Debug\Exepciones.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\bin\Debug\Exepciones.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\bin\Debug\Exepciones.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\obj\Debug\Exepciones.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\obj\Debug\Exepciones.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\obj\Debug\Exepciones.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia1\Exepciones\Exepciones\obj\Debug\Exepciones.pdb
