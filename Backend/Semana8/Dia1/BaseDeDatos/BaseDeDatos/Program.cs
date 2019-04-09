@@ -14,6 +14,22 @@ namespace BaseDeDatos
         static SqlCommand cmd;
         static void Main(string[] args)
         {
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             int opcion = 1;
             do
             {

@@ -1,9 +1,13 @@
 window.onload = () => {
-    var map;
+    
+    var image="./bear.png"
+    var mapaGoogle, miPosicion;
+    var btnColocarMarcador = document.getElementById("btnMiPosicion");
+    var btnQuitar = document.getElementById("btnQuitar");
     let configurarMapa = () => {
-        map = new google.maps.Map(document.getElementById('mapa'), {
+        mapaGoogle = new google.maps.Map(document.getElementById('mapa'), {
             center: { lat: -16.4310231, lng: -71.5189684 },
-            zoom: 10,
+            zoom: 15,
             styles: [
                 {
                     "elementType": "geometry",
@@ -14,10 +18,26 @@ window.onload = () => {
                     ]
                 },
                 {
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#a6b8ff"
+                        }
+                    ]
+                },
+                {
                     "elementType": "labels.icon",
                     "stylers": [
                         {
                             "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "color": "#3ac100"
                         }
                     ]
                 },
@@ -47,19 +67,11 @@ window.onload = () => {
                     ]
                 },
                 {
-                    "featureType": "landscape.natural.landcover",
-                    "elementType": "geometry.fill",
+                    "featureType": "administrative.province",
+                    "elementType": "labels.text.fill",
                     "stylers": [
                         {
-                            "color": "#0000ff"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape.natural.terrain",
-                    "stylers": [
-                        {
-                            "color": "#8aff3c"
+                            "color": "#ff4f53"
                         }
                     ]
                 },
@@ -82,10 +94,18 @@ window.onload = () => {
                     ]
                 },
                 {
+                    "featureType": "poi.attraction",
+                    "stylers": [
+                        {
+                            "color": "#f1fa54"
+                        }
+                    ]
+                },
+                {
                     "featureType": "poi.park",
                     "stylers": [
                         {
-                            "color": "#014e05"
+                            "color": "#33ec2f"
                         }
                     ]
                 },
@@ -95,6 +115,15 @@ window.onload = () => {
                     "stylers": [
                         {
                             "color": "#e5e5e5"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#33ec2f"
                         }
                     ]
                 },
@@ -172,6 +201,14 @@ window.onload = () => {
                 },
                 {
                     "featureType": "water",
+                    "stylers": [
+                        {
+                            "color": "#1febfc"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
                     "elementType": "geometry",
                     "stylers": [
                         {
@@ -184,7 +221,7 @@ window.onload = () => {
                     "elementType": "geometry.fill",
                     "stylers": [
                         {
-                            "color": "#ff3c41"
+                            "color": "#1febfc"
                         }
                     ]
                 },
@@ -199,6 +236,70 @@ window.onload = () => {
                 }
             ]
         });
+
+        configurarListeners();
+    };
+    let configurarListeners= ()=>{
+        
+        mapaGoogle.addListener("click",(coords)=>{
+            let milatLng={
+                lat:coords.latLng.lat(),
+                lng:coords.latLng.lng(),
+            }
+            var marcador = new google.maps.Marker(
+                {
+                    position:milatLng,
+                    icon:image,
+                    draggable:true
+                });
+                
+            marcador.addListener("dblclick",()=>{
+                marcador.setMap(null);
+            });
+            //añadiendo el evento drag al marcador creado
+            marcador.addListener("drag",(coords)=>{
+                console.log(`lat= ${coords.latLng.lat()}`);
+                
+            })
+            marcador.addListener("dragend",(coords)=>{
+                console.log(`lng= ${coords.latLng.lng()}`);
+            })
+            marcador.addListener("dragstart",(coords)=>{
+                console.log(`lng= ${coords.latLng.lng()}`);
+                
+            })
+            //agregar el marcador de google
+            marcador.setMap(mapaGoogle);
+            
+        })
+    };
+    let colocarMarcador = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((pos) => {
+                miPosicion = new google.maps.Marker({
+                    position: {
+                        lat: pos.coords.latitude,
+                        lng: pos.coords.longitude
+                    },title:"aqui estoy"
+                });
+                // Asigna el mapa en el que el marcador va a aparecer
+                miPosicion.setMap(mapaGoogle);
+                // setCenter => Re-posiciona el campo de visualizaacion del mapa de Google
+                mapaGoogle.setCenter({
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude
+                })
+            }, (error) => {
+                console.log(error.message);
+            });
+        } else {
+            alert("atencion no a autorizado a acceder a su ubicaion")
+        }
     }
+    let quitarMarcador=()=>{
+        miPosicion.setMap(null);
+    }
+    btnQuitar.onclick = quitarMarcador;
+    btnColocarMarcador.onclick = colocarMarcador;
     configurarMapa();
 };

@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\bin\Debug\conexion.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\bin\Debug\conexion.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\bin\Debug\conexion.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\obj\Debug\conexion.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\obj\Debug\conexion.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\obj\Debug\conexion.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\conexion\conexion\obj\Debug\conexion.pdb

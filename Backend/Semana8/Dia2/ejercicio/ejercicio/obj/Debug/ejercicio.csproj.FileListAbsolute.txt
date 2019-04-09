@@ -1,0 +1,12 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\ejercicio.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\ejercicio.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\ejercicio.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\Google.Protobuf.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\MySql.Data.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\Google.Protobuf.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\bin\Debug\MySql.Data.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\obj\Debug\ejercicio.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\obj\Debug\ejercicio.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\obj\Debug\ejercicio.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\obj\Debug\ejercicio.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana8\Dia2\ejercicio\ejercicio\obj\Debug\ejercicio.pdb
