@@ -1,6 +1,11 @@
 window.onload = () => {
     
-    var image="./bear.png"
+    var poly = new google.maps.Polyline({
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 3
+    });
+    var image="./rezisedgiphy.gif"
     var mapaGoogle, miPosicion;
     var btnColocarMarcador = document.getElementById("btnMiPosicion");
     var btnQuitar = document.getElementById("btnQuitar");
@@ -257,10 +262,13 @@ window.onload = () => {
                 marcador.setMap(null);
             });
             //añadiendo el evento drag al marcador creado
-            marcador.addListener("drag",(coords)=>{
+            /*marcador.addListener("drag",(coords)=>{
                 console.log(`lat= ${coords.latLng.lat()}`);
-                
-            })
+            })*/
+            marcador.addListener("drag",(coords)=>{
+                var path = poly.getPath();
+                path.push(coords.latLng);
+            });
             marcador.addListener("dragend",(coords)=>{
                 console.log(`lng= ${coords.latLng.lng()}`);
             })
@@ -268,6 +276,7 @@ window.onload = () => {
                 console.log(`lng= ${coords.latLng.lng()}`);
                 
             })
+            poly.setMap(mapaGoogle);
             //agregar el marcador de google
             marcador.setMap(mapaGoogle);
             
@@ -282,6 +291,9 @@ window.onload = () => {
                         lng: pos.coords.longitude
                     },title:"aqui estoy"
                 });
+                miPosicion.addListener("dblclick",()=>{
+                    miPosicion.setMap(null);
+                });
                 // Asigna el mapa en el que el marcador va a aparecer
                 miPosicion.setMap(mapaGoogle);
                 // setCenter => Re-posiciona el campo de visualizaacion del mapa de Google
@@ -293,7 +305,7 @@ window.onload = () => {
                 console.log(error.message);
             });
         } else {
-            alert("atencion no a autorizado a acceder a su ubicaion")
+            alert("atencion no a autorizado a acceder a su ubicacion")
         }
     }
     let quitarMarcador=()=>{
