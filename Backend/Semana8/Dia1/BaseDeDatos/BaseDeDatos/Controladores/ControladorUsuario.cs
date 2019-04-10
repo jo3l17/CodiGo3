@@ -16,6 +16,7 @@ namespace BaseDeDatos.Controladores
         SqlCommand cmd;
         public void InsertarUsuario(usuario u)
         {
+
             cmd = new SqlCommand("insert into usuarios values ('@nombre','@clave')",
                 con.GetConexion());
             cmd.CommandType = CommandType.StoredProcedure;

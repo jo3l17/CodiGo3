@@ -26,9 +26,9 @@ namespace ejercicio
             string DNI, clave;
             Console.WriteLine("ingrese su DNI");
             DNI = Console.ReadLine();
-            solicitarClave();
-            //Console.WriteLine("ingrese su contraseña");
-            //clave = Console.ReadLine();
+            //solicitarClave();
+            Console.WriteLine("ingrese su contraseña");
+            clave = Console.ReadLine();
 
             cmd = new SqlCommand($"select count (*) from cajero.cliente where DNI = '{DNI}' and clave = '{clave}'", con);
             int resultado = Convert.ToInt32(cmd.ExecuteScalar());
@@ -41,10 +41,10 @@ namespace ejercicio
             }
             
         }
-        static void solicitarClave()
+        /*static void solicitarClave()
         {
             cliente.ingresarClave();
-        }
+        }*/
         static void Menu(string nombre)
         {
             Console.WriteLine($"Bienvenido {nombre}");

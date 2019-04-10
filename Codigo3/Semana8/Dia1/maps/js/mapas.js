@@ -4,7 +4,9 @@ window.onload = () => {
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 3
-    });
+    });;
+    
+    //var coordAnterior = {}; 
     var image="./rezisedgiphy.gif"
     var mapaGoogle, miPosicion;
     var btnColocarMarcador = document.getElementById("btnMiPosicion");
@@ -250,7 +252,11 @@ window.onload = () => {
             let milatLng={
                 lat:coords.latLng.lat(),
                 lng:coords.latLng.lng(),
-            }
+                
+            };
+            var path = poly.getPath();
+            path.push(coords.latLng);
+            
             var marcador = new google.maps.Marker(
                 {
                     position:milatLng,
@@ -258,15 +264,18 @@ window.onload = () => {
                     draggable:true
                 });
                 
+                
+                
+                
             marcador.addListener("dblclick",()=>{
                 marcador.setMap(null);
+                //path.pop(coords.latLng);
             });
             //añadiendo el evento drag al marcador creado
             /*marcador.addListener("drag",(coords)=>{
                 console.log(`lat= ${coords.latLng.lat()}`);
             })*/
             marcador.addListener("drag",(coords)=>{
-                var path = poly.getPath();
                 path.push(coords.latLng);
             });
             marcador.addListener("dragend",(coords)=>{
@@ -274,12 +283,28 @@ window.onload = () => {
             })
             marcador.addListener("dragstart",(coords)=>{
                 console.log(`lng= ${coords.latLng.lng()}`);
-                
             })
-            poly.setMap(mapaGoogle);
+            
             //agregar el marcador de google
             marcador.setMap(mapaGoogle);
-            
+            /*let coordPolyline = [
+                coordAnterior,
+                {
+                    lat: coords.latLng.lat(),
+                    lng: coords.latLng.lng()
+                }
+            ]
+            coordAnterior = {
+                lat: coords.latLng.lat(),
+                lng: coords.latLng.lng()
+            };
+            let myPolyLine = new google.maps.Polyline({
+                path:coordPolyline,
+                strokeColor: '#ff0000',
+                strokeWeight:1
+            });
+            myPolyLine.setMap(mapaGoogle);*/
+            poly.setMap(mapaGoogle);
         })
     };
     let colocarMarcador = () => {
