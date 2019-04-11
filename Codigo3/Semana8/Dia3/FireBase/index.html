@@ -14,14 +14,26 @@
     <script src="./js/main.js"></script>
     <title>FireBase</title>
     <style>
-        #mapa{height: 350px;width: 100%}
+        #mapa {
+            height: 350px;
+            width: 100%
+        }
+
+        #mapita {
+            height: 400px;
+            width: 100%;
+        }
+        #mapa2{
+            height: 350px;
+            width: 100%
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="modal fade bd-example-modal-lg" id="modalcrearCancha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="modalEditarCancha" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -31,27 +43,80 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                        <div id="mapa">
-                            </div>
+                    <div id="mapa2">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="inputKey2" hidden="hidden">
+                        <label for="inputNombre2">Nombre</label>
+                        <input type="text" class="form-control" name="inputNombre2" id="inputNombre2"
+                            placeholder="Tu canchita">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDireccion2">Direccion</label>
+                        <input type="text" class="form-control" name="inputDireccion2" id="inputDireccion2"
+                            placeholder="Av. tu casa">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTelefono2">Telefono</label>
+                        <input type="number" class="form-control" name="inputTelefono2" id="inputTelefono2"
+                            placeholder="999 888 777">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLat2">Lat</label>
+                        <input type="text" class="form-control" name="inputLat2" id="inputLat2" readonly="readonly"
+                            placeholder="-12.213213123">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLng2">Lng</label>
+                        <input type="text" class="form-control" name="inputLng2" id="inputLng2" readonly="readonly"
+                            placeholder="-15.1244543534">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning" id="btnGuardarCambios">guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="modalcrearCancha" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Crear Canchita</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="mapa">
+                    </div>
                     <div class="form-group">
                         <label for="inputNombre">Nombre</label>
-                        <input type="text" class="form-control" name="inputNombre" id="inputNombre" placeholder="">
+                        <input type="text" class="form-control" name="inputNombre" id="inputNombre"
+                            placeholder="Tu canchita">
                     </div>
                     <div class="form-group">
                         <label for="inputDireccion">Direccion</label>
-                        <input type="text" class="form-control" name="inputDireccion" id="inputDireccion" placeholder="">
+                        <input type="text" class="form-control" name="inputDireccion" id="inputDireccion"
+                            placeholder="Av. tu casa">
                     </div>
                     <div class="form-group">
                         <label for="inputTelefono">Telefono</label>
-                        <input type="text" class="form-control" name="inputTelefono" id="inputTelefono" placeholder="">
+                        <input type="number" class="form-control" name="inputTelefono" id="inputTelefono"
+                            placeholder="999 888 777">
                     </div>
                     <div class="form-group">
                         <label for="inputLat">Lat</label>
-                        <input type="text" class="form-control" name="inputLat" id="inputLat" readonly="readonly" placeholder="">
+                        <input type="text" class="form-control" name="inputLat" id="inputLat" readonly="readonly"
+                            placeholder="-12.213213123">
                     </div>
                     <div class="form-group">
                         <label for="inputLng">Lng</label>
-                        <input type="text" class="form-control" name="inputLng" id="inputLng" readonly="readonly" placeholder="">
+                        <input type="text" class="form-control" name="inputLng" id="inputLng" readonly="readonly"
+                            placeholder="-15.1244543534">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -90,7 +155,11 @@
             </form>
         </div>
     </nav>
+    <div class="container-fluid mt-4">
+        <div class="row" id="mapita" hidden="hidden">
 
+        </div>
+    </div>
     <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-md-3">
@@ -107,14 +176,10 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-4">
-        <div class="row">
-            
-        </div>
-    </div>
+
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzh23_Ka5AqoOOaFHq3cArxIf2mCC_MLg" async
-    defer></script>
+        defer></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
