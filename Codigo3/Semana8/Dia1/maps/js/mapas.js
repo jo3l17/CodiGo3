@@ -264,9 +264,6 @@ window.onload = () => {
                     draggable:true
                 });
                 
-                
-                
-                
             marcador.addListener("dblclick",()=>{
                 marcador.setMap(null);
                 //path.pop(coords.latLng);
@@ -280,11 +277,10 @@ window.onload = () => {
             });
             marcador.addListener("dragend",(coords)=>{
                 console.log(`lng= ${coords.latLng.lng()}`);
-            })
+            });
             marcador.addListener("dragstart",(coords)=>{
                 console.log(`lng= ${coords.latLng.lng()}`);
-            })
-            
+            });
             //agregar el marcador de google
             marcador.setMap(mapaGoogle);
             /*let coordPolyline = [
