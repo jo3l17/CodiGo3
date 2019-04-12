@@ -10,6 +10,7 @@
     <!-- START-FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
     <!-- END OF FIREBASE -->
     <script src="./js/main.js"></script>
     <title>FireBase</title>
@@ -23,7 +24,8 @@
             height: 400px;
             width: 100%;
         }
-        #mapa2{
+
+        #mapa2 {
             height: 350px;
             width: 100%
         }
@@ -71,6 +73,11 @@
                         <input type="text" class="form-control" name="inputLng2" id="inputLng2" readonly="readonly"
                             placeholder="-15.1244543534">
                     </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputSubirArchivo">
+                        <label class="custom-file-label" for="inputSubirArchivo">Choose file</label>
+                    </div>
+                    <button class="btn btn-dark" id="btnSubirArchivo">Subir Archivo</button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -150,8 +157,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" id="inputBuscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Search</button>
             </form>
         </div>
     </nav>
@@ -169,7 +176,13 @@
                 <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalcrearCancha">
                     Crear Canchitas
                 </button>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputSubirArchivo">
+                    <label class="custom-file-label" for="inputSubirArchivo">Choose file</label>
+                </div>
+                <button class="btn btn-dark" id="btnSubirArchivo">Subir Archivo</button>
             </div>
+
             <div class="col-md-9">
                 <table class="table table-hover table-dark" id="tablita">
                 </table>

@@ -1,11 +1,18 @@
 window.onload = () => {
     // Declaracion de Variables
     var i = 0;
+    var marcadorCrearCancha = new google.maps.Marker(
+        {
+            
+        });
 
     var image = "./ball.gif"
     let btnGetCanchas = $("#btnGetCanchas")
     let btnCrearCanchita = $("#btnCrearCanchita")
     let btnGuardarCambios = $("#btnGuardarCambios");
+    let btnBuscar = $("#btnBuscar");
+    let btnSubirArchivo = $("#btnSubirArchivo");
+    let inputSubirArchivo = document.getElementById("inputSubirArchivo");
     
     let guardarCambios = ()=>{
         let key = $("#inputKey2").val();
@@ -15,17 +22,14 @@ window.onload = () => {
             direccion: $("#inputDireccion2").val(),
             telefono: $("#inputTelefono2").val(),
             Latitud: $("#inputLat2").val(),
-            Longitud: $("#inputLng2").val()
+            Longitud: $("#inputLng2").val(),
         }).then(()=>{
+            subirArchivo();
             $("#modalEditarCancha").modal("hide");
         }).catch(()=>{
             alert("Error al modificar los gatos");
         });
     };
-
-
-
-
     let configurarMapa = () => {
         mapaGoogle = new google.maps.Map(document.getElementById('mapa'), {
             center: { lat: -16.4310231, lng: -71.5189684 },
@@ -261,7 +265,7 @@ window.onload = () => {
 
         configurarListeners();
     };
-    let configurarMapa2 = () => {
+    let configurarMapatraer = () => {
         $("#mapita").removeAttr("hidden");
         mapaGoogle2 = new google.maps.Map(document.getElementById('mapita'), {
             center: { lat: -16.4310231, lng: -71.5189684 },
@@ -495,9 +499,8 @@ window.onload = () => {
             ]
         });
     }
-
-    let configurarMapa3 = () => {
-        mapaGoogle = new google.maps.Map(document.getElementById('mapa2'), {
+    let configurarMapaeditar = () => {
+        mapaGoogleEditar = new google.maps.Map(document.getElementById('mapa2'), {
             center: { lat: -16.4310231, lng: -71.5189684 },
             zoom: 15,
             styles: [
@@ -728,11 +731,10 @@ window.onload = () => {
                 }
             ]
         });
-
         configurarListeners1();
     };
     let configurarListeners1 = () => {
-        mapaGoogle.addListener("click", (coords) => {
+        mapaGoogleEditar.addListener("click", (coords) => {
             if (i == 0) {
                 let milatLng = {
                     lat: coords.latLng.lat(),
@@ -759,41 +761,44 @@ window.onload = () => {
                     $("#inputLng2").val(coords.latLng.lng());
                 });
                 i++;
-                marcador.setMap(mapaGoogle);
+                marcador.setMap(mapaGoogleEditar);
             };
         });
     };
     let configurarListeners = () => {
+        
         mapaGoogle.addListener("click", (coords) => {
             if (i == 0) {
                 let milatLng = {
                     lat: coords.latLng.lat(),
                     lng: coords.latLng.lng(),
                 };
-                $("#inputLat").val(coords.latLng.lat());
-                $("#inputLng").val(coords.latLng.lng());
-                var marcador = new google.maps.Marker(
+                marcadorCrearCancha = new google.maps.Marker(
                     {
                         position: milatLng,
                         icon: image,
                         draggable: true
                     });
-                marcador.addListener("dblclick", () => {
-                    marcador.setMap(null);
+                $("#inputLat").val(coords.latLng.lat());
+                $("#inputLng").val(coords.latLng.lng());
+                
+                marcadorCrearCancha.addListener("dblclick", () => {
+                    marcadorCrearCancha.setMap(null);
                     $("#inputLat").val("")
                     $("#inputLng").val("")
                     i--;
                 });
-                marcador.addListener("drag", (coords) => {
+                marcadorCrearCancha.addListener("drag", (coords) => {
                 });
-                marcador.addListener("dragend", (coords) => {
+                marcadorCrearCancha.addListener("dragend", (coords) => {
                     $("#inputLat").val(coords.latLng.lat());
                     $("#inputLng").val(coords.latLng.lng());
                 });
                 i++;
-                marcador.setMap(mapaGoogle);
+                marcadorCrearCancha.setMap(mapaGoogle);
             };
         });
+        
     };
     let iniciarFirebase = () => {
         var config = {
@@ -818,7 +823,7 @@ window.onload = () => {
         //       por lo menos 1 vez.
         // once => Trae la data una sola vez
         referencia.on('value', (data) => {
-            configurarMapa2(data);
+            configurarMapatraer(data);
             imprimirData(data);
             dibujarTabla(data);
             dibujarMarcadores(data);
@@ -952,10 +957,62 @@ window.onload = () => {
             $("#inputTelefono").val("");
             $("#inputLat").val("");
             $("#inputLng").val("");
+            marcadorCrearCancha.setMap(null);
         }
-
-
     };
+    let buscarCancha = (evento)=>{
+        evento.preventDefault();
+        console.log("En buscar");
+        let referencia = firebase.database().ref("canchitas");
+        //equalTo => El valor tiene que coincidir exactamente.
+        // startAt => similar a un like => [busqueda]%
+        // endAt=> similiar a un like => %[busqueda]
+        console.log($("#inputBuscar").val());
+        
+        referencia.orderByChild('nombre').startAt($("#inputBuscar").val()).on('value',data=>{
+            data.forEach(fila=>{
+                //muestra el key y el nombre de el archivo buscado
+                console.log(fila.key);
+                console.log(fila.val().nombre);
+            });
+        });
+    };
+    let subirArchivo = ()=>{
+        let archivo = inputSubirArchivo.files[0];
+        let nombre = archivo.name;
+        let nombreFinal = +(new Date())+"-"+nombre
+        //Referencia al Storage de Firebase
+        let referenciaStorage = firebase.storage().ref();
+        let metadata={
+            contentType:archivo.type
+        };
+        referenciaStorage.child(`carpeta/${nombreFinal}`)
+                            .put(archivo,metadata)
+                            .then((response)=>{
+                                //obtener la URL de descarga de la imagen
+                                // devuelve una promesa
+                                return response.ref.getDownloadURL()
+                            }).then((url)=>{
+                                console.log(url);
+                                let referenciaDatabase = firebase.database().ref(`canchitas/${$("#inputKey2").val()}`)
+                                return referenciaDatabase.update({imagen:url});
+                            }).then(()=>{
+                                console.log("archivo subido y cancha actualizada");
+                            }).catch((error)=>{
+                                console.log(error);
+                            });
+        /*console.log(nombreFinal);
+        console.log(archivo.type);
+        console.log(archivo.size);
+        if((archivo.size/1024)>1){
+            console.log("Subir otro archivo");
+        }*/
+        
+        
+
+    }
+
+
 
     // Iniciando Configuracion
     iniciarFirebase();
@@ -963,8 +1020,10 @@ window.onload = () => {
     btnGetCanchas.click(getCanchitas);
     btnCrearCanchita.click(crearCancha);
     btnGuardarCambios.click(guardarCambios);
+    btnBuscar.click(buscarCancha);
+    btnSubirArchivo.click(subirArchivo);
     configurarMapa();
-    configurarMapa3();
+    configurarMapaeditar();
 }
 let eliminarCanchaById = (key) => {
     //let id = key;
