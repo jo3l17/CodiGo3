@@ -20,7 +20,10 @@ export class HeroesComponent{
     }*/
     // public heroe:stirng = 'Batman';*/
     public arrHeroes:Array<Hero> = HEROES;
+
+    public selectedHero:Hero;
+
     public onSelect(selectedHero):void{
-        console.log(selectedHero)
+        this.selectedHero=selectedHero;
     }
 }

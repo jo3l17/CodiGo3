@@ -13,13 +13,33 @@
     </label>
 </div> -->
 
-<h2>Lista de Heroes</h2>
+<div *ngIf="selectedHero !=null"> 
+    <h2>{{selectedHero.name}} details</h2>
+    <div>
+        <span>id:</span> {{selectedHero.id}}
+    </div>
+    <div>
+        <label for="Nombre">Nombre:
+            <input  type="text"
+                    placeHolder="ingrese nombre..."
+                    [(ngModel)]="selectedHero.name">
+        </label>
+    </div>
+</div>
+<div *ngIf="selectedHero==null">
+    Ningun heroe ha sido seleccionado
+</div>
+
+
 <ul class="heroes">
-    <li *ngFor = "let objHeroe of arrHeroes"
-        (click)="onSelect(objHeroe)">
-        <span class ="badge">
+    <li *ngFor="let objHeroe of arrHeroes"
+        (click)="onSelect(objHeroe)"
+        [class.selected]="objHeroe===selectedHero">
+        <span class="badge">
             {{objHeroe.id}}
         </span>
         {{objHeroe.name}}
     </li>
 </ul>
+
+<app-hero-detail [objHeroe]="selectedHero"></app-hero-detail>
