@@ -1,0 +1,25 @@
+<!-- <h2>{{objHero.name}} !!!</h2>
+<div>
+    Nombre: <span>{{objHero.name}}</span>
+</div>
+<div>
+    Id: <span>{{objHero.id}}</span>
+</div>
+<div>
+    <label for="Nombre">Nombre:
+        <input  type="text"
+                placeHolder="ingrese nombre..."
+                [(ngModel)]="objHero.name">
+    </label>
+</div> -->
+
+<h2>Lista de Heroes</h2>
+<ul class="heroes">
+    <li *ngFor = "let objHeroe of arrHeroes"
+        (click)="onSelect(objHeroe)">
+        <span class ="badge">
+            {{objHeroe.id}}
+        </span>
+        {{objHeroe.name}}
+    </li>
+</ul>
