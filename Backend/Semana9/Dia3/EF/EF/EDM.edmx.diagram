@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b65c8a600254e18a46900de55ff067d" Name="Diagram1">
+        <EntityTypeShape EntityType="parqueoModel.cobros" Width="1.5" PointX="3.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="parqueoModel.registros" Width="1.5" PointX="5.375" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="parqueoModel.usuario" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="parqueoModel.FK__registros__idCob__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="parqueoModel.FK__registros__idUsu__182C9B23" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="parqueoModel.tabla" PointX="8.5" PointY="1.875" Width="1.5" />
+        <EntityTypeShape EntityType="parqueoModel.vehiculo" Width="1.5" PointX="5.375" PointY="7" />
+        <AssociationConnector Association="parqueoModel.FK__cobros__vehiculo__15502E781" />
+        <AssociationConnector Association="parqueoModel.FK__registros__vehic__1920BF5C1" />
+        <AssociationConnector Association="parqueoModel.FK__usuario__vehicul__1273C1CD1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

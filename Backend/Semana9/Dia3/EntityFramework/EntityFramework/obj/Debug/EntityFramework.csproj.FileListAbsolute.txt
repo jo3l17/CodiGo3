@@ -1,0 +1,12 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\obj\Debug\EntityFramework.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\obj\Debug\EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\obj\Debug\EntityFramework.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\obj\Debug\EntityFramework.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana9\Dia3\EntityFramework\EntityFramework\obj\Debug\EntityFramework.pdb

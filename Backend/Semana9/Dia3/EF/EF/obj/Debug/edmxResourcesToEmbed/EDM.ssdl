@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="parqueoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cobros">
+    <Key>
+      <PropertyRef Name="idCobro" />
+    </Key>
+    <Property Name="idCobro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tiempoinicio" Type="datetime" Nullable="false" />
+    <Property Name="tiempofin" Type="datetime" Nullable="false" />
+    <Property Name="cobro" Type="smallmoney" Nullable="false" />
+    <Property Name="vehiculoPlaca" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="registros">
+    <Key>
+      <PropertyRef Name="idRegistro" />
+    </Key>
+    <Property Name="idRegistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idUsuario" Type="int" />
+    <Property Name="vehiculoPlaca" Type="varchar" MaxLength="6" />
+    <Property Name="idCobro" Type="int" />
+  </EntityType>
+  <EntityType Name="tabla">
+    <Key>
+      <PropertyRef Name="idTabla" />
+    </Key>
+    <Property Name="idTabla" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="apellidoUsuario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="vehiculoPlaca" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="vehiculos">
+    <Key>
+      <PropertyRef Name="placa" />
+    </Key>
+    <Property Name="placa" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <Association Name="FK__cobros__vehiculo__15502E78">
+    <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+    <End Role="cobros" Type="Self.cobros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vehiculos">
+        <PropertyRef Name="placa" />
+      </Principal>
+      <Dependent Role="cobros">
+        <PropertyRef Name="vehiculoPlaca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__registros__idCob__1A14E395">
+    <End Role="cobros" Type="Self.cobros" Multiplicity="0..1" />
+    <End Role="registros" Type="Self.registros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cobros">
+        <PropertyRef Name="idCobro" />
+      </Principal>
+      <Dependent Role="registros">
+        <PropertyRef Name="idCobro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__registros__idUsu__182C9B23">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="registros" Type="Self.registros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="registros">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__registros__vehic__1920BF5C">
+    <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+    <End Role="registros" Type="Self.registros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vehiculos">
+        <PropertyRef Name="placa" />
+      </Principal>
+      <Dependent Role="registros">
+        <PropertyRef Name="vehiculoPlaca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__usuario__vehicul__1273C1CD">
+    <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vehiculos">
+        <PropertyRef Name="placa" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="vehiculoPlaca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="parqueoModelStoreContainer">
+    <EntitySet Name="cobros" EntityType="Self.cobros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="registros" EntityType="Self.registros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tabla" EntityType="Self.tabla" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vehiculos" EntityType="Self.vehiculos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__cobros__vehiculo__15502E78" Association="Self.FK__cobros__vehiculo__15502E78">
+      <End Role="vehiculos" EntitySet="vehiculos" />
+      <End Role="cobros" EntitySet="cobros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__registros__idCob__1A14E395" Association="Self.FK__registros__idCob__1A14E395">
+      <End Role="cobros" EntitySet="cobros" />
+      <End Role="registros" EntitySet="registros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__registros__idUsu__182C9B23" Association="Self.FK__registros__idUsu__182C9B23">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="registros" EntitySet="registros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__registros__vehic__1920BF5C" Association="Self.FK__registros__vehic__1920BF5C">
+      <End Role="vehiculos" EntitySet="vehiculos" />
+      <End Role="registros" EntitySet="registros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__usuario__vehicul__1273C1CD" Association="Self.FK__usuario__vehicul__1273C1CD">
+      <End Role="vehiculos" EntitySet="vehiculos" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

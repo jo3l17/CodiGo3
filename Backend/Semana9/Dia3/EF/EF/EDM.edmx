@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="parqueoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cobros">
+          <Key>
+            <PropertyRef Name="idCobro" />
+          </Key>
+          <Property Name="idCobro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tiempoinicio" Type="datetime" Nullable="false" />
+          <Property Name="tiempofin" Type="datetime" Nullable="false" />
+          <Property Name="cobro" Type="smallmoney" Nullable="false" />
+          <Property Name="vehiculoPlaca" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="registros">
+          <Key>
+            <PropertyRef Name="idRegistro" />
+          </Key>
+          <Property Name="idRegistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuario" Type="int" />
+          <Property Name="vehiculoPlaca" Type="varchar" MaxLength="6" />
+          <Property Name="idCobro" Type="int" />
+        </EntityType>
+        <EntityType Name="tabla">
+          <Key>
+            <PropertyRef Name="idTabla" />
+          </Key>
+          <Property Name="idTabla" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="apellidoUsuario" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="vehiculoPlaca" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="vehiculos">
+          <Key>
+            <PropertyRef Name="placa" />
+          </Key>
+          <Property Name="placa" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="color" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tipo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <Association Name="FK__cobros__vehiculo__15502E78">
+          <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+          <End Role="cobros" Type="Self.cobros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehiculos">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="cobros">
+              <PropertyRef Name="vehiculoPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registros__idCob__1A14E395">
+          <End Role="cobros" Type="Self.cobros" Multiplicity="0..1" />
+          <End Role="registros" Type="Self.registros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cobros">
+              <PropertyRef Name="idCobro" />
+            </Principal>
+            <Dependent Role="registros">
+              <PropertyRef Name="idCobro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registros__idUsu__182C9B23">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="registros" Type="Self.registros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="idUsuario" />
+            </Principal>
+            <Dependent Role="registros">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registros__vehic__1920BF5C">
+          <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+          <End Role="registros" Type="Self.registros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehiculos">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="registros">
+              <PropertyRef Name="vehiculoPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usuario__vehicul__1273C1CD">
+          <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehiculos">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="vehiculoPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="parqueoModelStoreContainer">
+          <EntitySet Name="cobros" EntityType="Self.cobros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="registros" EntityType="Self.registros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tabla" EntityType="Self.tabla" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vehiculos" EntityType="Self.vehiculos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__cobros__vehiculo__15502E78" Association="Self.FK__cobros__vehiculo__15502E78">
+            <End Role="vehiculos" EntitySet="vehiculos" />
+            <End Role="cobros" EntitySet="cobros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registros__idCob__1A14E395" Association="Self.FK__registros__idCob__1A14E395">
+            <End Role="cobros" EntitySet="cobros" />
+            <End Role="registros" EntitySet="registros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registros__idUsu__182C9B23" Association="Self.FK__registros__idUsu__182C9B23">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="registros" EntitySet="registros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registros__vehic__1920BF5C" Association="Self.FK__registros__vehic__1920BF5C">
+            <End Role="vehiculos" EntitySet="vehiculos" />
+            <End Role="registros" EntitySet="registros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__vehicul__1273C1CD" Association="Self.FK__usuario__vehicul__1273C1CD">
+            <End Role="vehiculos" EntitySet="vehiculos" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="parqueoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cobros">
+          <Key>
+            <PropertyRef Name="idCobro" />
+          </Key>
+          <Property Name="idCobro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tiempoinicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="tiempofin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="cobro" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="vehiculoPlaca" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="registros" Relationship="Self.FK__registros__idCob__1A14E395" FromRole="cobros" ToRole="registros" />
+          <NavigationProperty Name="vehiculo" Relationship="parqueoModel.FK__cobros__vehiculo__15502E781" FromRole="cobros" ToRole="vehiculo" />
+        </EntityType>
+        <EntityType Name="registros">
+          <Key>
+            <PropertyRef Name="idRegistro" />
+          </Key>
+          <Property Name="idRegistro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuario" Type="Int32" />
+          <Property Name="vehiculoPlaca" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="idCobro" Type="Int32" />
+          <NavigationProperty Name="cobros" Relationship="Self.FK__registros__idCob__1A14E395" FromRole="registros" ToRole="cobros" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__registros__idUsu__182C9B23" FromRole="registros" ToRole="usuario" />
+          <NavigationProperty Name="vehiculo" Relationship="parqueoModel.FK__registros__vehic__1920BF5C1" FromRole="registros" ToRole="vehiculo" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidoUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vehiculoPlaca" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="registros" Relationship="Self.FK__registros__idUsu__182C9B23" FromRole="usuario" ToRole="registros" />
+          <NavigationProperty Name="vehiculo" Relationship="parqueoModel.FK__usuario__vehicul__1273C1CD1" FromRole="usuario" ToRole="vehiculo" />
+        </EntityType>
+        <Association Name="FK__registros__idCob__1A14E395">
+          <End Role="cobros" Type="Self.cobros" Multiplicity="0..1" />
+          <End Role="registros" Type="Self.registros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cobros">
+              <PropertyRef Name="idCobro" />
+            </Principal>
+            <Dependent Role="registros">
+              <PropertyRef Name="idCobro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registros__idUsu__182C9B23">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="registros" Type="Self.registros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="idUsuario" />
+            </Principal>
+            <Dependent Role="registros">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="parqueoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cobros" EntityType="Self.cobros" />
+          <EntitySet Name="registros" EntityType="Self.registros" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <AssociationSet Name="FK__registros__idCob__1A14E395" Association="Self.FK__registros__idCob__1A14E395">
+            <End Role="cobros" EntitySet="cobros" />
+            <End Role="registros" EntitySet="registros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registros__idUsu__182C9B23" Association="Self.FK__registros__idUsu__182C9B23">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="registros" EntitySet="registros" />
+          </AssociationSet>
+          <EntitySet Name="tablas" EntityType="parqueoModel.tabla" />
+          <EntitySet Name="vehiculos1" EntityType="parqueoModel.vehiculo" />
+          <AssociationSet Name="FK__cobros__vehiculo__15502E781" Association="parqueoModel.FK__cobros__vehiculo__15502E781">
+            <End Role="vehiculo" EntitySet="vehiculos1" />
+            <End Role="cobros" EntitySet="cobros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__registros__vehic__1920BF5C1" Association="parqueoModel.FK__registros__vehic__1920BF5C1">
+            <End Role="vehiculo" EntitySet="vehiculos1" />
+            <End Role="registros" EntitySet="registros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__vehicul__1273C1CD1" Association="parqueoModel.FK__usuario__vehicul__1273C1CD1">
+            <End Role="vehiculo" EntitySet="vehiculos1" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="tabla">
+          <Key>
+            <PropertyRef Name="idTabla" />
+          </Key>
+          <Property Name="idTabla" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" Type="String" />
+          <Property Name="nombre" MaxLength="10" FixedLength="true" Unicode="true" Type="String" />
+        </EntityType>
+        <EntityType Name="vehiculo">
+          <Key>
+            <PropertyRef Name="placa" />
+          </Key>
+          <Property Name="placa" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="color" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tipo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="marca" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="cobros" Relationship="parqueoModel.FK__cobros__vehiculo__15502E781" FromRole="vehiculo" ToRole="cobros" />
+          <NavigationProperty Name="registros" Relationship="parqueoModel.FK__registros__vehic__1920BF5C1" FromRole="vehiculo" ToRole="registros" />
+          <NavigationProperty Name="usuarios" Relationship="parqueoModel.FK__usuario__vehicul__1273C1CD1" FromRole="vehiculo" ToRole="usuario" />
+        </EntityType>
+        <Association Name="FK__cobros__vehiculo__15502E781">
+          <End Type="parqueoModel.vehiculo" Role="vehiculo" Multiplicity="0..1" />
+          <End Type="parqueoModel.cobros" Role="cobros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehiculo">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="cobros">
+              <PropertyRef Name="vehiculoPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__registros__vehic__1920BF5C1">
+          <End Type="parqueoModel.vehiculo" Role="vehiculo" Multiplicity="0..1" />
+          <End Type="parqueoModel.registros" Role="registros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehiculo">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="registros">
+              <PropertyRef Name="vehiculoPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usuario__vehicul__1273C1CD1">
+          <End Type="parqueoModel.vehiculo" Role="vehiculo" Multiplicity="0..1" />
+          <End Type="parqueoModel.usuario" Role="usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehiculo">
+              <PropertyRef Name="placa" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="vehiculoPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="parqueoModelStoreContainer" CdmEntityContainer="parqueoEntities">
+          <EntitySetMapping Name="cobros">
+            <EntityTypeMapping TypeName="parqueoModel.cobros">
+              <MappingFragment StoreEntitySet="cobros">
+                <ScalarProperty Name="idCobro" ColumnName="idCobro" />
+                <ScalarProperty Name="tiempoinicio" ColumnName="tiempoinicio" />
+                <ScalarProperty Name="tiempofin" ColumnName="tiempofin" />
+                <ScalarProperty Name="cobro" ColumnName="cobro" />
+                <ScalarProperty Name="vehiculoPlaca" ColumnName="vehiculoPlaca" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="registros">
+            <EntityTypeMapping TypeName="parqueoModel.registros">
+              <MappingFragment StoreEntitySet="registros">
+                <ScalarProperty Name="idRegistro" ColumnName="idRegistro" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="vehiculoPlaca" ColumnName="vehiculoPlaca" />
+                <ScalarProperty Name="idCobro" ColumnName="idCobro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="parqueoModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+                <ScalarProperty Name="apellidoUsuario" ColumnName="apellidoUsuario" />
+                <ScalarProperty Name="vehiculoPlaca" ColumnName="vehiculoPlaca" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tablas">
+            <EntityTypeMapping TypeName="parqueoModel.tabla">
+              <MappingFragment StoreEntitySet="tabla">
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="idTabla" ColumnName="idTabla" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vehiculos1">
+            <EntityTypeMapping TypeName="parqueoModel.vehiculo">
+              <MappingFragment StoreEntitySet="vehiculos">
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="placa" ColumnName="placa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
