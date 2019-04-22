@@ -1,0 +1,24 @@
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.exe.config
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.exe
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.pdb
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.CopyComplete
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.exe
+C:\Users\USER\source\repos\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EFCodeFirst.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia1\EFCodeFirst\EFCodeFirst\obj\Debug\EFCodeFirst.pdb

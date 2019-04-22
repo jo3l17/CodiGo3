@@ -1,0 +1,9 @@
+<div *ngIf="_sLog.logs.length!">
+  <h2>Log</h2>
+  <button class="clear" (click)="_sLog.clear()">clear</button>
+  <div *ngFor="let log of _sLog.logs">
+    {{log}}
+  </div>
+</div>
+<hr>
+<p>FIN DE LOGS</p>

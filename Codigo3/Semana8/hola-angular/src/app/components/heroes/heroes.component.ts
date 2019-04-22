@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Hero} from './../../models/hero';
-import {HEROES} from './../../seeders/seeder-heroes';
+import { HeroService } from './../../services/hero.service';
 
 @Component({
     selector: 'app-heroes',
@@ -19,9 +19,18 @@ export class HeroesComponent{
         this.heroe.name = "Batman";
     }*/
     // public heroe:stirng = 'Batman';*/
-    public arrHeroes:Array<Hero> = HEROES;
+    
+    
+    public arrHeroes:Array<Hero>;
 
     public selectedHero:Hero;
+
+    constructor(private _sHero:HeroService){
+        // this.arrHeroes = this._sHero.getHeroes();
+        _sHero.getHeroes().then((respuesta)=>{
+            this.arrHeroes=respuesta;
+        });
+    }
 
     public onSelect(selectedHero):void{
         this.selectedHero=selectedHero;

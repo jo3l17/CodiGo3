@@ -5,4 +5,4 @@ export const HEROES: Array<Hero> = [
     { id: 3, name: 'Spiderman' },
     { id: 4, name: 'Venom' },
     { id: 5, name: 'Ironman' },
-    { id: 1, name: 'Thor' }]
+    { id: 6, name: 'Thor' }]
