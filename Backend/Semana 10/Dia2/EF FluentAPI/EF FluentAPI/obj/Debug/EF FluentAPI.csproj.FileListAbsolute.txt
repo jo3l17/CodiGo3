@@ -1,0 +1,12 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EF FluentAPI.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EF FluentAPI.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EF FluentAPI.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EntityFramework.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EntityFramework.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\obj\Debug\EF FluentAPI.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\obj\Debug\EF FluentAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\obj\Debug\EF FluentAPI.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\obj\Debug\EF FluentAPI.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia2\EF FluentAPI\EF FluentAPI\obj\Debug\EF FluentAPI.pdb

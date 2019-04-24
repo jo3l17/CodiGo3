@@ -1,6 +1,11 @@
 import { Component, Input} from '@angular/core';
 import { Hero } from './../../models/hero';
 
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+
+import { HeroService } from './../../services/hero.service';
+
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -10,7 +15,22 @@ export class HeroDetailComponent{
 
   @Input() objHeroe:Hero;
 
-  constructor() { }
-
-
+  constructor(private _sHero: HeroService,
+              private _route: ActivatedRoute,
+              private _location: Location) {
+    this.getIdAndSetHero();
+              }
+  /**
+   * Funcion que obtiene el id recibido en la URL
+   * y consume el servicio para traer al heroe dado su id
+   */
+  getIdAndSetHero(){
+    let idUrl = +this._route.snapshot.paramMap.get('id');
+    let heroFound = this._sHero.getHeroById(idUrl).then(respuesta=>{
+      this.objHeroe = respuesta;
+    });
+    // this.objHeroe = heroFound;
+    console.log("id de la URL" + idUrl);
+    
+  }
 }
