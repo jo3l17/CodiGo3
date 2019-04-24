@@ -1,0 +1,12 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\obj\Debug\EF_Relaciones.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\obj\Debug\EF_Relaciones.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EF_Relaciones.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EF_Relaciones.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EF_Relaciones.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EntityFramework.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EntityFramework.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\obj\Debug\EF_Relaciones.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\obj\Debug\EF_Relaciones.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia3\EF_Relaciones\EF_Relaciones\obj\Debug\EF_Relaciones.pdb
