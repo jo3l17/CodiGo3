@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <form action="" class="col-md-6" #frmCrearRest="ngForm" (ngSubmit)="crearRestaurant(frmCrearRest)">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" [ngClass]="{'border-danger': nombre.touched && !nombre.valid}" #nombre="ngModel"
+          name="nombre" id="nombre" class="form-control" placeholder="Ingrese el Nombre del Restaurant"
+          [(ngModel)]="objRestaurant.Nombre" required>
+        <small class="text-danger" *ngIf="nombre.touched && !nombre.valid">
+          El campo de nombre es obligatorio siñosrh
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="imagen">Url de la imagen</label>
+        <input type="text" [ngClass]="{'border-danger': imagen.touched && !imagen.valid}" #imagen="ngModel"
+          name="imagen" id="imagen" class="form-control" placeholder="Ingrese la url de la imagen"
+          [(ngModel)]="objRestaurant.Imagen" required>
+        <small class="text-danger" *ngIf="imagen.touched && !imagen.valid">
+          El campo de imagen es obligatorio siñosrh
+        </small>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-block btn-primary" value="Crear Restaurante"
+          [disabled]="!frmCrearRest.form.valid">
+      </div>
+    </form>
+  </div>
+
+</div>
