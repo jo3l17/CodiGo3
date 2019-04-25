@@ -14,7 +14,6 @@ export class HttpComponent implements OnInit,OnDestroy {
 
   constructor(private _sHttp:HttpService) {
     console.log("--- Constructor ---");
-    
   }
 
   ngOnInit() {

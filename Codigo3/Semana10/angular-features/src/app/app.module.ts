@@ -12,6 +12,12 @@ import { ErrorComponent } from './components/error/error.component';
 import { HttpComponent } from './components/http/http.component';
 import { FormsComponent } from './components/forms/forms.component';
 
+// libreia toasterModule
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +25,21 @@ import { FormsComponent } from './components/forms/forms.component';
     HomeComponent,
     ErrorComponent,
     HttpComponent,
-    FormsComponent
+    FormsComponent,
+    PipesComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,  
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass:'toast-bottom-right',
+      preventDuplicates:true
+    }) // ToasterModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
