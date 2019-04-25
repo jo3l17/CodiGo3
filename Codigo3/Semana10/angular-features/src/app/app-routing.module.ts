@@ -5,6 +5,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { HttpComponent } from './components/http/http.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { FirebaseComponent } from './components/firebase/firebase.component';
 
 const routes: Routes = [
     {
@@ -21,11 +22,15 @@ const routes: Routes = [
     },
     {
         path: 'forms',
-        component:FormsComponent
+        component: FormsComponent
     },
     {
         path: 'pipes',
         component: PipesComponent
+    },
+    {
+        path: 'firebase',
+        component: FirebaseComponent
     },
     {
         path: '**',
@@ -34,8 +39,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations:[],
+    declarations: [],
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

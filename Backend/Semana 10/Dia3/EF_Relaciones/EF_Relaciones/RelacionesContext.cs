@@ -37,11 +37,9 @@ namespace EF_Relaciones
             modelBuilder.Entity<Estudiante>()
                 .HasOptional(x => x.Direccion)
                 .WithRequired(x => x.Estudiante);
-
             modelBuilder.Entity<Telefono>()
                 .HasRequired(x => x.Estudiante)
                 .WithRequiredDependent(x => x.Telefono);
-
             base.OnModelCreating(modelBuilder);
         }
         

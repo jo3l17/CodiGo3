@@ -18,6 +18,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 
+// Libreia AngularFire
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+// Enviroments
+import { environment } from './../environments/environment';
+import { FirebaseComponent } from './components/firebase/firebase.component'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,19 +36,23 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
     HttpComponent,
     FormsComponent,
     PipesComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    FirebaseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,  
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 5000,
-      positionClass:'toast-bottom-right',
-      preventDuplicates:true
-    }) // ToasterModule added
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
+    }), // ToasterModule added,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
