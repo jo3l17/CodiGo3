@@ -1,0 +1,12 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\obj\Debug\EF Linq.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\obj\Debug\EF Linq.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EF Linq.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EF Linq.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EF Linq.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EntityFramework.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EntityFramework.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\obj\Debug\EF Linq.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\obj\Debug\EF Linq.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia4\EF Linq\EF Linq\obj\Debug\EF Linq.pdb
