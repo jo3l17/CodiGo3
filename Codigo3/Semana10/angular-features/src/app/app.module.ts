@@ -28,8 +28,10 @@ import { environment } from './../environments/environment';
 import { FirebaseComponent } from './components/firebase/firebase.component'; 
 
 // Datatable
-import { DataTablesModule } from 'angular-datatables'
+import { DataTablesModule } from 'angular-datatables';
 import { DatatableComponent } from './components/datatable/datatable.component';
+import { CustomDatatableComponent } from './components/custom-datatable/custom-datatable.component';
+import { ProtegidoComponent } from './components/protegido/protegido.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { DatatableComponent } from './components/datatable/datatable.component';
     PipesComponent,
     CapitalizePipe,
     FirebaseComponent,
-    DatatableComponent
+    DatatableComponent,
+    CustomDatatableComponent,
+    ProtegidoComponent
   ],
   imports: [
     BrowserModule,
