@@ -6,6 +6,7 @@ import { HttpComponent } from './components/http/http.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { FirebaseComponent } from './components/firebase/firebase.component';
+import { DatatableComponent } from './components/datatable/datatable.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,10 @@ const routes: Routes = [
     {
         path: 'firebase',
         component: FirebaseComponent
+    },
+    {
+        path: 'datatable',
+        component: DatatableComponent
     },
     {
         path: '**',

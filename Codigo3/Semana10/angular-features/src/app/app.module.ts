@@ -27,6 +27,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from './../environments/environment';
 import { FirebaseComponent } from './components/firebase/firebase.component'; 
 
+// Datatable
+import { DataTablesModule } from 'angular-datatables'
+import { DatatableComponent } from './components/datatable/datatable.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,8 @@ import { FirebaseComponent } from './components/firebase/firebase.component';
     FormsComponent,
     PipesComponent,
     CapitalizePipe,
-    FirebaseComponent
+    FirebaseComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,8 @@ import { FirebaseComponent } from './components/firebase/firebase.component';
     }), // ToasterModule added,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
