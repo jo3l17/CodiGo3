@@ -1,3 +1,29 @@
 <p>
-  {{data.marcador.titulo}}
+  {{objMarcador.titulo}}
 </p>
+<p>{{objMarcador.descripcion}}</p>
+
+<form class="example-form" #miForm="ngForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Escriba el titulo"
+            [value]="objMarcador.titulo"
+            name="titulo"
+            #titulo>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Escriba la descripcion..."
+              rows="5"
+              cols="10"
+              [value]="objMarcador.descripcion"
+              
+              name="descripcion"
+              #descripcion></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary"
+          type="button"
+          (click)="guardarCambios(titulo.value,descripcion.value)">Guardar Cambios</button>
+  <button mat-raised-button color="warn"
+          type="button"
+          (click)="cancelar()">Cancelar</button>
+</form>

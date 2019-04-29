@@ -9,6 +9,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 // angular snackbar
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
+// input material
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -16,13 +19,15 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatButtonModule,
     MatToolbarModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -31,7 +32,8 @@ import { MapaEditarComponent } from './dialogs/mapa-editar/mapa-editar.component
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyBzh23_Ka5AqoOOaFHq3cArxIf2mCC_MLg'
     }),
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
