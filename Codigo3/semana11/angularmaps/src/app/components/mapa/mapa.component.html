@@ -1,0 +1,17 @@
+<agm-map [latitude]="lat"
+          [longitude]="lng"
+          [zoom]="15"
+          (mapClick)="agregarMarcador($event)">
+  <agm-marker *ngFor="let marcador of marcadores; let pos = index"
+              [latitude]="marcador.lat" 
+              [longitude]="marcador.lng">
+              <agm-info-window [disableAutoPan]="true">
+                <strong>{{marcador.titulo}}</strong>
+                <p>{{marcador.descripcion}}</p>
+                <p>{{marcador.lat}} {{marcador.lng}}</p>
+                <button mat-raised-button color="primary" (click)="abriDialog(marcador)">Editar</button>
+                <button mat-raised-button color="warn" (click)="eliminarMarcador(pos)">Eliminar</button>
+              </agm-info-window>
+            </agm-marker>
+            
+</agm-map>
