@@ -1,8 +1,0 @@
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\bin\Debug\netcoreapp2.1\EFCodeFisrtDataBase.deps.json
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\bin\Debug\netcoreapp2.1\EFCodeFisrtDataBase.runtimeconfig.json
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\bin\Debug\netcoreapp2.1\EFCodeFisrtDataBase.runtimeconfig.dev.json
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\bin\Debug\netcoreapp2.1\EFCodeFisrtDataBase.dll
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\obj\Debug\netcoreapp2.1\EFCodeFisrtDataBase.csprojAssemblyReference.cache
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\obj\Debug\netcoreapp2.1\EFCodeFisrtDataBase.csproj.CoreCompileInputs.cache
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\obj\Debug\netcoreapp2.1\EFCodeFisrtDataBase.AssemblyInfoInputs.cache
-C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFisrtDataBase\EFCodeFisrtDataBase\obj\Debug\netcoreapp2.1\EFCodeFisrtDataBase.AssemblyInfo.cs

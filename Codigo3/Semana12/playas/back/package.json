@@ -1,0 +1,17 @@
+{
+  "name": "playas",
+  "version": "1.0.0",
+  "description": "Sistema Web para ubicar playas de estacionamiento de acuerdo a nuestra ubicacion y disponibilidad de las mismas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./dist/index.js"
+  },
+  "keywords": [
+    "playas",
+    "estacionamiento",
+    "startup"
+  ],
+  "author": "Joel Johan Valdez Angeles",
+  "license": "MIT"
+}

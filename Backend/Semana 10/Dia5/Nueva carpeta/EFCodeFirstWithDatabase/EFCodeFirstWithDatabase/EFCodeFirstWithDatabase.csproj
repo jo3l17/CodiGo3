@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38630D53-E0D9-41BE-A4E4-BF93A5C709F7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EFCodeFirstWithDatabase</RootNamespace>
+    <AssemblyName>EFCodeFirstWithDatabase</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BikeStoresModel.cs" />
+    <Compile Include="brand.cs" />
+    <Compile Include="category.cs" />
+    <Compile Include="customer.cs" />
+    <Compile Include="Migrations\201904261600477_ModeloInicial.cs" />
+    <Compile Include="Migrations\201904261600477_ModeloInicial.Designer.cs">
+      <DependentUpon>201904261600477_ModeloInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904261610359_CreaTablaAlumnos.cs" />
+    <Compile Include="Migrations\201904261610359_CreaTablaAlumnos.Designer.cs">
+      <DependentUpon>201904261610359_CreaTablaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301937259_AgregaColumnaApodoATablaAlumno.cs" />
+    <Compile Include="Migrations\201904301937259_AgregaColumnaApodoATablaAlumno.Designer.cs">
+      <DependentUpon>201904301937259_AgregaColumnaApodoATablaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904302006541_CambiaColumnaApodoASobrenombre.cs" />
+    <Compile Include="Migrations\201904302006541_CambiaColumnaApodoASobrenombre.Designer.cs">
+      <DependentUpon>201904302006541_CambiaColumnaApodoASobrenombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904302021076_QuitaColumnaSobrenombreDeTablaAlumno.cs" />
+    <Compile Include="Migrations\201904302021076_QuitaColumnaSobrenombreDeTablaAlumno.Designer.cs">
+      <DependentUpon>201904302021076_QuitaColumnaSobrenombreDeTablaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904302024386_BorraTablaAlumno.cs" />
+    <Compile Include="Migrations\201904302024386_BorraTablaAlumno.Designer.cs">
+      <DependentUpon>201904302024386_BorraTablaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="order.cs" />
+    <Compile Include="order_items.cs" />
+    <Compile Include="product.cs" />
+    <Compile Include="product_history.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="staff.cs" />
+    <Compile Include="stock.cs" />
+    <Compile Include="store.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904261600477_ModeloInicial.resx">
+      <DependentUpon>201904261600477_ModeloInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904261610359_CreaTablaAlumnos.resx">
+      <DependentUpon>201904261610359_CreaTablaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301937259_AgregaColumnaApodoATablaAlumno.resx">
+      <DependentUpon>201904301937259_AgregaColumnaApodoATablaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904302006541_CambiaColumnaApodoASobrenombre.resx">
+      <DependentUpon>201904302006541_CambiaColumnaApodoASobrenombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904302021076_QuitaColumnaSobrenombreDeTablaAlumno.resx">
+      <DependentUpon>201904302021076_QuitaColumnaSobrenombreDeTablaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904302024386_BorraTablaAlumno.resx">
+      <DependentUpon>201904302024386_BorraTablaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

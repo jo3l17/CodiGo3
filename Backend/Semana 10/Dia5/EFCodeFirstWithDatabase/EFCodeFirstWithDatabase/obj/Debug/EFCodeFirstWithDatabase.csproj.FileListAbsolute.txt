@@ -1,0 +1,34 @@
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EFCodeFirstWithDatabase.exe.config
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EFCodeFirstWithDatabase.exe
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EFCodeFirstWithDatabase.pdb
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.dll
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.xml
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csproj.CopyComplete
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.exe
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.pdb
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.ModeloInicial.resources
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.CreaTablaAlumnos.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EFCodeFirstWithDatabase.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EFCodeFirstWithDatabase.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EFCodeFirstWithDatabase.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.ModeloInicial.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.CreaTablaAlumnos.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csproj.GenerateResource.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.csproj.CopyComplete
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.CambiarAsobrenombreColumnaApodo.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.CambiarnombreAColumnaSobrenombre.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.BorrarColumnaSobrenombre2.resources
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 10\Dia5\EFCodeFirstWithDatabase\EFCodeFirstWithDatabase\obj\Debug\EFCodeFirstWithDatabase.Migrations.BorrarTablaAlumno.resources
