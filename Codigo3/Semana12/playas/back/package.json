@@ -13,5 +13,18 @@
     "startup"
   ],
   "author": "Joel Johan Valdez Angeles",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.26",
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.13.8",
+    "@types/sequelize": "^4.27.49",
+    "@types/validator": "^10.11.0"
+  }
 }
