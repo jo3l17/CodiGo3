@@ -16,7 +16,7 @@ export const Servicio = servicio_model(sequelize);
 export const Playa = playa_model(sequelize);
 export const PlayaServicio = playaservicio_model(sequelize);
 export const Registro = registro_model(sequelize);
-export const slotPlaya = slotPlaya_model(sequelize);
+export const SlotPlaya = slotPlaya_model(sequelize);
 export const usuario = usuario_model(sequelize);
 
 
@@ -24,6 +24,11 @@ export const usuario = usuario_model(sequelize);
 // este campo sera la clave foranea que una PlayaServicio con Playa
 PlayaServicio.belongsTo(Playa,{foreignKey:'playa_id'});
 PlayaServicio.belongsTo(Servicio,{foreignKey:'serv_id'});
-slotPlaya.belongsTo(Playa,{foreignKey:'playa_id'})
+
+SlotPlaya.belongsTo(Playa,{foreignKey:'playa_id'});
+Playa.hasMany(SlotPlaya,{foreignKey:'playa_id'})
+
 Registro.belongsTo(usuario,{foreignKey:'usu_id'});
-Registro.belongsTo(slotPlaya,{foreignKey:'slotp_id'})
+SlotPlaya.hasMany(Registro,{foreignKey:'slotp_id'});
+
+Registro.belongsTo(SlotPlaya,{foreignKey:'slotp_id'});

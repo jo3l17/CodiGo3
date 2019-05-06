@@ -1,10 +1,12 @@
 // importando las rutas
 import { servicio_router } from './api/routes/servicio';
+import { playa_router } from './api/routes/playas';
 import { sequelize } from './api/config/sequelize';
+import { registro_router } from './api/routes/registro';
 
 
 var express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -15,6 +17,8 @@ app.use(bodyParser.json());
 const PUERTO = process.env.PORT || 3000;
 
 app.use('/api', servicio_router);
+app.use('/api', playa_router);
+app.use('/api',registro_router);
 
 app.listen(PUERTO, function () {
     console.log("Servidor corriendo correctamente en el puesto 3000");
