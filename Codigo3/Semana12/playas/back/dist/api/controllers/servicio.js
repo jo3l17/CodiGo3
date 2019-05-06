@@ -15,9 +15,9 @@ exports.servicio_controller = {
         });
     },
     create: (req, res) => {
-        /*let{serv_nomb,serv_desc} = req.body;
+        /*let{serv_nom,serv_desc} = req.body;
         let objServicio = {
-            serv_nomb,
+            serv_nom,
             serv_desc
         };*/
         //otra manera
@@ -79,7 +79,7 @@ exports.servicio_controller = {
         });
     },
     update: (req, res) => {
-        sequelize_1.Servicio.update({ serv_nomb: req.body.serv_nomb, serv_desc: req.body.serv_desc }, { where: { serv_id: req.params.serv_id } }).then((servicioCreado) => {
+        sequelize_1.Servicio.update({ serv_nom: req.body.serv_nom, serv_desc: req.body.serv_desc }, { where: { serv_id: req.params.serv_id } }).then((servicioCreado) => {
             if (servicioCreado) {
                 let response = {
                     messgae: 'modified',

@@ -18,9 +18,9 @@ export var servicio_controller = {
     },
     create:(req:Request,res:Response)=>{
 
-        /*let{serv_nomb,serv_desc} = req.body;
+        /*let{serv_nom,serv_desc} = req.body;
         let objServicio = {
-            serv_nomb,
+            serv_nom,
             serv_desc
         };*/
         //otra manera
@@ -83,7 +83,7 @@ export var servicio_controller = {
     },
     update:(req:Request,res:Response)=>{
         
-        Servicio.update({serv_nomb:req.body.serv_nomb,serv_desc:req.body.serv_desc},{where:{serv_id:req.params.serv_id}}).then((servicioCreado:any)=>{
+        Servicio.update({serv_nom:req.body.serv_nom,serv_desc:req.body.serv_desc},{where:{serv_id:req.params.serv_id}}).then((servicioCreado:any)=>{
             if(servicioCreado){
                 let response = {
                     messgae:'modified',

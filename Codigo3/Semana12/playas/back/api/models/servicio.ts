@@ -9,7 +9,7 @@ export var servicio_model = (sequelize:Sequelize)=>{
             autoIncrement:true,
             allowNull:false
         },
-        serv_nomb:{
+        serv_nom:{
             type:DataTypes.STRING(50),
             allowNull:true
         },
