@@ -4,7 +4,11 @@ const sequelize_1 = require("./../config/sequelize");
 exports.servicio_controller = {
     getAll: (req, res) => {
         sequelize_1.Servicio.findAll().then((servicios) => {
-            //console.log(servicios);
+            // Codigo de prueba
+            servicios.forEach((servicio) => {
+                servicio.mostrarIdYNombre();
+            });
+            // Codigo de prueba
             let response = {
                 messgae: "ok",
                 content: servicios

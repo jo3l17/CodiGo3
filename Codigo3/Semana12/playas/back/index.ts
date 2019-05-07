@@ -3,6 +3,7 @@ import { servicio_router } from './api/routes/servicio';
 import { playa_router } from './api/routes/playas';
 import { sequelize } from './api/config/sequelize';
 import { registro_router } from './api/routes/registro';
+import { auth_router } from './api/routes/auth';
 
 
 var express = require('express');
@@ -19,6 +20,7 @@ const PUERTO = process.env.PORT || 3000;
 app.use('/api', servicio_router);
 app.use('/api', playa_router);
 app.use('/api',registro_router);
+app.use('/api',auth_router);
 
 app.listen(PUERTO, function () {
     console.log("Servidor corriendo correctamente en el puesto 3000");

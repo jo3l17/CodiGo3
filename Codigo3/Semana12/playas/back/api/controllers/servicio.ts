@@ -6,7 +6,11 @@ import { Servicio } from './../config/sequelize';
 export var servicio_controller = {
     getAll: (req: Request, res: Response) => {
         Servicio.findAll().then((servicios:any) => {
-        //console.log(servicios);
+        // Codigo de prueba
+            servicios.forEach((servicio:any) => {
+                servicio.mostrarIdYNombre()
+            });
+        // Codigo de prueba
         let response = {
             messgae:"ok",
             content:servicios

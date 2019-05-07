@@ -23,5 +23,9 @@ exports.servicio_model = (sequelize) => {
         tableName: 't_servicio'
     });
     // aqui se declaran las funcions de Modelo o de la clase
+    servicio_model.prototype.mostrarIdYNombre = () => {
+        console.log(`ID => ${this.serv_id}`);
+        console.log(`Nombre =>${this.serv_nom}`);
+    };
     return servicio_model;
 };

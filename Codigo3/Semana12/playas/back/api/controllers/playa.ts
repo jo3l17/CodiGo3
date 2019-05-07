@@ -12,9 +12,9 @@ export var playa_controller = {
             },
             include:[{
                 model:SlotPlaya,
-                where:{
+                /*where:{
                     slotp_est:0
-                }
+                }*/
             }]
         }).then((respuesta:any)=>{
             let response = {

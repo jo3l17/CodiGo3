@@ -17,7 +17,7 @@ export const Playa = playa_model(sequelize);
 export const PlayaServicio = playaservicio_model(sequelize);
 export const Registro = registro_model(sequelize);
 export const SlotPlaya = slotPlaya_model(sequelize);
-export const usuario = usuario_model(sequelize);
+export const Usuario = usuario_model(sequelize);
 
 
 // en el modelo playa servicio va a crear un campo de nombre 'playa_id'
@@ -28,7 +28,7 @@ PlayaServicio.belongsTo(Servicio,{foreignKey:'serv_id'});
 SlotPlaya.belongsTo(Playa,{foreignKey:'playa_id'});
 Playa.hasMany(SlotPlaya,{foreignKey:'playa_id'})
 
-Registro.belongsTo(usuario,{foreignKey:'usu_id'});
+Registro.belongsTo(Usuario,{foreignKey:'usu_id'});
 SlotPlaya.hasMany(Registro,{foreignKey:'slotp_id'});
 
 Registro.belongsTo(SlotPlaya,{foreignKey:'slotp_id'});

@@ -11,9 +11,6 @@ exports.playa_controller = {
             },
             include: [{
                     model: sequelize_2.SlotPlaya,
-                    where: {
-                        slotp_est: 0
-                    }
                 }]
         }).then((respuesta) => {
             let response = {
