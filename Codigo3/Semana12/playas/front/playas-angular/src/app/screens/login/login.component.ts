@@ -19,7 +19,9 @@ export class LoginComponent implements OnInit {
 
   login(){
     this._sAuth.login(this.objUsuario).subscribe((respuesta)=>{
-      console.log(respuesta);
+      if (respuesta.message=='ok'&& respuesta.token) {
+        this._sAuth.saveToken(respuesta.token);
+      }
     })
   }
 
