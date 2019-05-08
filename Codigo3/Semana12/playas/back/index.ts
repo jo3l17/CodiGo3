@@ -4,6 +4,8 @@ import { playa_router } from './api/routes/playas';
 import { sequelize } from './api/config/sequelize';
 import { registro_router } from './api/routes/registro';
 import { auth_router } from './api/routes/auth';
+import { NextFunction,Request,Response} from 'express';
+
 
 
 var express = require('express');
@@ -17,10 +19,22 @@ app.use(bodyParser.json());
 
 const PUERTO = process.env.PORT || 3000;
 
+//configurando el cors
+app.use((req:Request,res:Response,next:NextFunction)=>{
+    res.header('Access-Control-Allow-Origin','http://localhost:4200');
+    res.header('Access-Control-Allow-Headers','Content-type,Authorization');
+    res.header('Access-Control-Allow-Methods','GET,POST');
+    res.header('Allow','GET,POST');
+    next();
+});
+
+//usando rutas importadas
 app.use('/api', servicio_router);
 app.use('/api', playa_router);
 app.use('/api',registro_router);
 app.use('/api',auth_router);
+
+
 
 app.listen(PUERTO, function () {
     console.log("Servidor corriendo correctamente en el puesto 3000");

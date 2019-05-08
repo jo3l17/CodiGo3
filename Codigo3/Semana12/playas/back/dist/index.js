@@ -13,6 +13,15 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const PUERTO = process.env.PORT || 3000;
+//configurando el cors
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Headers', 'Content-type,Authorization');
+    res.header('Access-Control-Allow-Methods', 'GET,POST');
+    res.header('Allow', 'GET,POST');
+    next();
+});
+//usando rutas importadas
 app.use('/api', servicio_1.servicio_router);
 app.use('/api', playas_1.playa_router);
 app.use('/api', registro_1.registro_router);
