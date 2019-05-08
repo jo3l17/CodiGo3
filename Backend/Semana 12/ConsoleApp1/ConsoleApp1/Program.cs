@@ -7,6 +7,15 @@ namespace ConsoleApp1
         string nombre { get; set; }
         string Describir();
     }
+    abstract class Mamifero
+    {
+        void Correr()
+        {
+            Console.WriteLine("estoy corriendo");
+        }
+
+        public abstract void TomaLeche();
+    }
     class Perro : Ianimal
     {
         private string nombre;

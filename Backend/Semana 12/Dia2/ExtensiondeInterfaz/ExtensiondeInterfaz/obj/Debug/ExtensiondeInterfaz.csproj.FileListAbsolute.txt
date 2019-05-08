@@ -1,0 +1,7 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\bin\Debug\ExtensiondeInterfaz.exe.config
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\bin\Debug\ExtensiondeInterfaz.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\bin\Debug\ExtensiondeInterfaz.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\obj\Debug\ExtensiondeInterfaz.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\obj\Debug\ExtensiondeInterfaz.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\obj\Debug\ExtensiondeInterfaz.exe
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia2\ExtensiondeInterfaz\ExtensiondeInterfaz\obj\Debug\ExtensiondeInterfaz.pdb
