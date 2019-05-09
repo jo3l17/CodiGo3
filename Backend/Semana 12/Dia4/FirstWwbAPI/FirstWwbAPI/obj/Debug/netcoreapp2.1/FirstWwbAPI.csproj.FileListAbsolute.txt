@@ -1,0 +1,14 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\bin\Debug\netcoreapp2.1\FirstWwbAPI.deps.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\bin\Debug\netcoreapp2.1\FirstWwbAPI.runtimeconfig.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\bin\Debug\netcoreapp2.1\FirstWwbAPI.runtimeconfig.dev.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\bin\Debug\netcoreapp2.1\FirstWwbAPI.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\bin\Debug\netcoreapp2.1\FirstWwbAPI.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.RazorAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.RazorAssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.AssemblyInfoInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.AssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\FirstWwbAPI\FirstWwbAPI\obj\Debug\netcoreapp2.1\FirstWwbAPI.pdb

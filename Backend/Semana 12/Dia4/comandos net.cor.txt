@@ -1,0 +1,20 @@
+cd..
+regresar una carpeta
+
+mkdir CoreProjects
+crear directorio
+
+dotnet new sln
+nueva solucion
+
+dotnet new webapi
+nueva webapi
+
+dotnet build
+construir
+
+dotnet sln add FirstWebAPI.csproj
+crear proyecto
+
+code .
+abrir en visual studio code

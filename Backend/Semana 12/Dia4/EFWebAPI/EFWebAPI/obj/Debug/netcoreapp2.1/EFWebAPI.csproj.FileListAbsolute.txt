@@ -1,0 +1,14 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.RazorAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.RazorAssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.AssemblyInfoInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.AssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\bin\Debug\netcoreapp2.1\EFWebAPI.deps.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\bin\Debug\netcoreapp2.1\EFWebAPI.runtimeconfig.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\bin\Debug\netcoreapp2.1\EFWebAPI.runtimeconfig.dev.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\bin\Debug\netcoreapp2.1\EFWebAPI.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\bin\Debug\netcoreapp2.1\EFWebAPI.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana 12\Dia4\EFWebAPI\EFWebAPI\obj\Debug\netcoreapp2.1\EFWebAPI.pdb
