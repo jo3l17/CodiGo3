@@ -19,6 +19,16 @@ namespace EFWebAPI.Controllers
         {
             this.context = context;
         }
+        [HttpGet("relacionar/{idAuthor}/{idBook}")]
+        public ActionResult<Book> Relacionar (int idAuthor, int idBook)
+        {
+            var author = context.Authors.Find(idAuthor);
+            var book = context.Books.Find(idBook);
+            book.Author = author;
+            context.Entry(book).State = EntityState.Modified;
+            context.SaveChanges();
+            return Ok(book);
+        }
         [HttpPost]
         public ActionResult Get([FromBody] Author author)
         {
@@ -30,19 +40,15 @@ namespace EFWebAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Author>> Get()
         {
-
-            return context.Authors;
+            return context.Authors.Include("Books").ToList();
         }
         [HttpGet("{id}",Name="GetAuthor")]
         public ActionResult<IEnumerable<Author>> Get(int id)
         {
             var author = context.Authors.Find(id);
             if (author == null)
-                return BadRequest();
+                return BadRequest(id);
             return Ok(author);
-            {
-
-            }
         }
         [HttpPut]
         public ActionResult Put([FromBody] Author author)
