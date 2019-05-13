@@ -8,22 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class SidenavComponent implements OnInit {
 
   private mediaMatcher:MediaQueryList = matchMedia('(max-width:720px)');
+
   constructor() { }
 
   ngOnInit() {
   }
-  
-  /*receptor($event){
-    console.log($event);
-    
-  }*/
 
   pantallaSmall(){
-    // mediaMatcher returna true si la pantalla es menor a 720 pixeles
+    // matches retorna true, cuando la pantalla es menor igual a 720;
     return this.mediaMatcher.matches;
   }
-  // nose(){
-  //   console.log("nel")
-  // }
 
 }

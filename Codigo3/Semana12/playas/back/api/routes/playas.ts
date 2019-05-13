@@ -7,3 +7,4 @@ export var playa_router = Router();
 
 
 playa_router.get('/playa/:playa_id/getslots', wachiman, playa_controller.getAllSlotsByPlayaId);
+playa_router.get('/playa', playa_controller.getAllPlayas);

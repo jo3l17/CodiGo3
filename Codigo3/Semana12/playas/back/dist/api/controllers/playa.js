@@ -19,5 +19,20 @@ exports.playa_controller = {
             };
             res.status(200).json(response);
         });
+    },
+    getAllPlayas: (req, res) => {
+        sequelize_1.Playa.findAll({
+            include: [
+                {
+                    model: sequelize_2.SlotPlaya,
+                },
+            ],
+        }).then((respuesta) => {
+            let response = {
+                message: 'ok',
+                content: respuesta
+            };
+            res.status(200).json(response);
+        });
     }
 };
