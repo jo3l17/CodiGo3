@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { PlayaService } from '../../services/playa.service';
+import { MatSort, MatTableDataSource } from '@angular/material';
 
 export interface PeriodicElement {
   name: string;
@@ -8,7 +9,7 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: PeriodicElement[]   = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
   {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -26,16 +27,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './playas.component.html',
   styleUrls: ['./playas.component.css']
 })
-export class PlayasComponent implements OnInit {
+export class PlayasComponent implements OnInit, AfterViewInit {
 
-  
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-
-  constructor(private _sPlaya:PlayaService) { }
-
+  // playas = ELEMENT_DATA;
+  playas = new MatTableDataSource(ELEMENT_DATA);
+  constructor(private _sPlaya: PlayaService) { }
+  @ViewChild(MatSort) sort: MatSort;
   ngOnInit() {
-    this._sPlaya.getPlayas();
+    
   }
-  
+  ngAfterViewInit(): void {
+    this.playas.sort = this.sort;
+  }
+
 }

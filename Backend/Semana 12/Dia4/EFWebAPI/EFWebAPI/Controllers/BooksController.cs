@@ -56,7 +56,6 @@ namespace EFWebAPI.Controllers
             if (book == null || book.Author == null)
                 return BadRequest();
             
-            
             return Ok(book.Author.ID);
         }
 
