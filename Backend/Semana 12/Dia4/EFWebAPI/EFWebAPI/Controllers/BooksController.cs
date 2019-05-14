@@ -27,8 +27,9 @@ namespace EFWebAPI.Controllers
             return context.Books.Include(x=>x.Author).ToList();
         }
 
+
         // GET api/<controller>/5
-        [HttpGet("{id}", Name = "GetBook")]
+        /*[HttpGet("{id}", Name = "GetBook")]
         public ActionResult<IEnumerable<Book>> Get(int id)
         {
             var book = context.Books.Find(id);
@@ -38,8 +39,13 @@ namespace EFWebAPI.Controllers
             {
 
             }
+        }*/
+        [HttpGet("{id}")]
+        [ResponseCache(Duration = 10)]
+        public string Get(int id)
+        {
+            return DateTime.Now.Second.ToString();
         }
-
         // POST api/<controller>
         [HttpPost]
         public ActionResult<IEnumerable<Book>> Post([FromBody]Book book)

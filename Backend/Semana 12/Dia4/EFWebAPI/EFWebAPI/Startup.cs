@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EFWebAPI.EFContext;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,8 @@ namespace EFWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+            services.AddResponseCaching();
             services.AddDbContext<EFWebAPIContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("APIConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
@@ -45,7 +48,7 @@ namespace EFWebAPI
             {
                 app.UseHsts();
             }
-
+            app.UseResponseCaching();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

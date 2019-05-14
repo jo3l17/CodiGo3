@@ -7,12 +7,17 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { MaterialModule } from '../material.module';
 import { PlayasComponent } from './components/playas/playas.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [ToolbarComponent, SidenavComponent, MainContentComponent, PlayasComponent],
   imports: [
     CommonModule,
     LoggedRoutingModule,
-    MaterialModule
+    MaterialModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBzh23_Ka5AqoOOaFHq3cArxIf2mCC_MLg'
+    })
   ]
 })
 export class LoggedModule { }
