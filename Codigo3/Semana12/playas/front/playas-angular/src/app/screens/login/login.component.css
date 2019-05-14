@@ -1,5 +1,5 @@
 .example-card {
-    width: 600px;
+    flex: 0.5;
 }
 
 .example-header-image {
@@ -15,4 +15,10 @@
 
 .example-full-width {
     width: 100%;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
 }

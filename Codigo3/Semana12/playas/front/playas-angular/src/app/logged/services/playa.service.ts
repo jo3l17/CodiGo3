@@ -31,6 +31,8 @@ export class PlayaService {
         playa.ocu = ocupados;
       });
       this.playasRetorno = playas.content;
+      
+      
     });
   }
 }

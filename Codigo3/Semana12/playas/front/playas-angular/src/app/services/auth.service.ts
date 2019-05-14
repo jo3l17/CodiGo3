@@ -12,6 +12,19 @@ export class AuthService {
   constructor(private _http:HttpClient) {
     this.getToken();
   }
+  isLogged(){
+    let userDetails =this.getUserDetails();
+    if (userDetails) {
+      let ahora = Date.now()/1000
+      if(JSON.parse(userDetails).exp> ahora){
+        return true;
+      }
+      // console.log(userDetails.exp);
+      // console.log(Date.now()/1000);
+    }
+    localStorage.removeItem('token');
+    return false;
+  }
   getToken(){
     if(!this.token){
       this.token = localStorage.getItem("token");
@@ -31,7 +44,8 @@ export class AuthService {
   getUserDetails(){
     if(this.token){
       let centro = this.token.split('.')[1];
-      console.log(window.atob(centro));
+      return window.atob(centro);
     }
+    return null;
   }
 }

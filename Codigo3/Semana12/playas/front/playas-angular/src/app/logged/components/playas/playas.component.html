@@ -24,6 +24,9 @@
             Lista de Playas
           </ng-template>
           <!-- table -->
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+          </mat-form-field>
           <table mat-table [dataSource]="playas" matSort class="mat-elevation-z8">
             <!-- Position Column -->
             <ng-container matColumnDef="position">
@@ -49,6 +52,7 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
           <!-- /table -->
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
         </mat-tab>
       </mat-tab-group>
 
@@ -59,4 +63,5 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
+  
 </div>
