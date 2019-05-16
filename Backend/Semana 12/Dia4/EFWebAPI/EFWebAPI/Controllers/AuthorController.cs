@@ -1,26 +1,33 @@
-﻿using EFWebAPI.EFContext;
-using EFWebAPI.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using EFWebAPI.EFContext;
+using EFWebAPI.Entities;
+using EFWebAPI.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorController : ControllerBase
+    public class AuthorsController : ControllerBase
     {
         private readonly EFWebAPIContext context;
-        public AuthorController(EFWebAPIContext context)
+        private readonly IMapper mapper;
+
+        public AuthorsController(EFWebAPIContext context, IMapper mapper)
         {
             this.context = context;
+            this.mapper = mapper;
         }
+
         [HttpGet("relacionar/{idAuthor}/{idBook}")]
-        public ActionResult<Book> Relacionar (int idAuthor, int idBook)
+        public ActionResult<Book> Relacionar(int idAuthor, int idBook)
         {
             var author = context.Authors.Find(idAuthor);
             var book = context.Books.Find(idBook);
@@ -29,34 +36,62 @@ namespace EFWebAPI.Controllers
             context.SaveChanges();
             return Ok(book);
         }
+
         [HttpPost]
-        public ActionResult Get([FromBody] Author author)
+        public ActionResult Post([FromBody] Author author)
         {
             context.Add(author);
             context.SaveChanges();
-            return new CreatedAtRouteResult("GetAuthor", new { id = author.ID, name = author.name });
+            return new CreatedAtRouteResult("GetAuthor", new { id = author.ID }, author);
+        }
+
+        [HttpGet("{id}", Name = "GetAuthor")]
+        public ActionResult<AuthorDTO> Get(int id)
+        {
+            var author = context.Authors.Find(id);
+
+            if (author == null)
+                return BadRequest(id);
+
+            var authorDTO = mapper.Map<AuthorDTO>(author);
+            return authorDTO;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Author>> Get()
         {
-            return context.Authors.Include("Books").ToList();
+            var authors = context.Authors.Include(x => x.Books).ToList();
+            var authorsDTO = mapper.Map<List<AuthorDTO>>(authors);
+            return Ok(authorsDTO);
+
         }
-        [HttpGet("{id}",Name="GetAuthor")]
-        public ActionResult<IEnumerable<Author>> Get(int id)
-        {
-            var author = context.Authors.Find(id);
-            if (author == null)
-                return BadRequest(id);
-            return Ok(author);
-        }
+
+
+
         [HttpPut]
         public ActionResult Put([FromBody] Author author)
         {
+            // if (author == null)
+            //   return BadRequest();
+
             context.Entry(author).State = EntityState.Modified;
             context.SaveChanges();
             return Ok();
         }
+
+        [HttpPut("UpdateName")]
+        public ActionResult Put([BindRequired]int id, [BindRequired] string newName)
+        {
+            var author = context.Authors.Find(id);
+            if (author == null)
+                return BadRequest();
+
+            author.name = newName;
+            context.Entry(author).State = EntityState.Modified;
+            context.SaveChanges();
+            return Ok();
+        }
+
 
     }
 }

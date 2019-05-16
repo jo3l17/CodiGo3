@@ -1,0 +1,14 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\bin\Debug\netcoreapp2.1\AuthenticationJWT1.deps.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\bin\Debug\netcoreapp2.1\AuthenticationJWT1.runtimeconfig.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\bin\Debug\netcoreapp2.1\AuthenticationJWT1.runtimeconfig.dev.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\bin\Debug\netcoreapp2.1\AuthenticationJWT1.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\bin\Debug\netcoreapp2.1\AuthenticationJWT1.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.RazorAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.RazorAssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.AssemblyInfoInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.AssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.RazorTargetAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana13\Dia4\AuthenticationJWT1\AuthenticationJWT1\obj\Debug\netcoreapp2.1\AuthenticationJWT1.pdb

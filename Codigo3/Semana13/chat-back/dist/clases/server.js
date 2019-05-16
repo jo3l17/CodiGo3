@@ -9,6 +9,13 @@ const socket_io_1 = __importDefault(require("socket.io"));
 class Server {
     constructor() {
         this.app = express_1.default();
+        this.app.use((req, res, next) => {
+            res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+            res.header('Access-Control-Allow-Headers', 'Content-type,Authorization');
+            res.header('Access-Control-Allow-Methods', 'GET,POST');
+            res.header('Allow', 'GET,POST');
+            next();
+        });
         this.httpServer = new http_1.default.Server(this.app);
         this.io = socket_io_1.default(this.httpServer);
         this.puerto = process.env.PORT || 3700;
@@ -19,7 +26,7 @@ class Server {
         console.log("Ecuchando los sockets");
         this.io.on('connect', (cliente) => {
             console.log("Uy!, alguien se conecto");
-            console.log(cliente);
+            console.log(cliente.id);
         });
     }
     asignarRutas() {

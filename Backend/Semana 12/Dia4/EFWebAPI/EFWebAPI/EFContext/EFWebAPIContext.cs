@@ -9,12 +9,14 @@ namespace EFWebAPI.EFContext
 {
     public class EFWebAPIContext : DbContext
     {
-        public EFWebAPIContext(DbContextOptions<EFWebAPIContext> options):base(options)
+        public EFWebAPIContext(DbContextOptions<EFWebAPIContext> options) :
+           base(options)
         {
 
         }
 
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
+
     }
 }

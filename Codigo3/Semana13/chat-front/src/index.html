@@ -12,3 +12,9 @@
   <app-root></app-root>
 </body>
 </html>
+<script>
+  if (global === undefined) {
+    var global = window;
+  }
+</script>
+<!-- https://github.com/aws/aws-amplify/issues/678 fix end-->
