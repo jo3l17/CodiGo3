@@ -37,6 +37,26 @@ class Server {
             cliente.on('disconnect', () => {
                 console.log(`el cliente ${cliente.id} se desconecto`);
                 this.clientes.remove(cliente.id);
+                this.io.emit('retorno-usuarios', this.clientes.getClientes());
+            });
+            cliente.on('configurar-usuario', (data) => {
+                let objCliente = new cliente_1.Cliente(cliente.id);
+                objCliente.nombre = data;
+                this.clientes.update(objCliente);
+                console.log("nueva lista de conectados");
+                console.log(this.clientes.getClientes());
+                this.io.emit('retorno-usuarios', this.clientes.getClientes());
+            });
+            cliente.on('lista-usuarios', () => {
+                this.io.emit('retorno-usuarios', this.clientes.getClientes());
+            });
+            cliente.on('enviar-mensaje', (mensaje) => {
+                let objCliente = this.clientes.getNombreById(cliente.id);
+                let content = {
+                    mensaje: mensaje,
+                    nombre: objCliente.nombre
+                };
+                this.io.emit('nuevo-mensaje', content);
             });
         });
     }
