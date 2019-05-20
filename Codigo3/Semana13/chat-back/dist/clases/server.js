@@ -22,8 +22,14 @@ class Server {
         this.httpServer = new http_1.default.Server(this.app);
         this.io = socket_io_1.default(this.httpServer);
         this.puerto = process.env.PORT || 3700;
+        this.configurarBodyParser();
         this.asignarRutas();
         this.escucharSockets();
+    }
+    configurarBodyParser() {
+        var bodyParser = require('body-parser');
+        this.app.use(bodyParser.urlencoded({ extended: false }));
+        this.app.use(bodyParser.json());
     }
     escucharSockets() {
         console.log("Ecuchando los sockets");
@@ -61,8 +67,20 @@ class Server {
         });
     }
     asignarRutas() {
-        this.app.use('/', (req, res) => {
+        this.app.get('/', (req, res) => {
             res.send("buenas");
+        });
+        this.app.post('/enviar-mensaje', (req, res) => {
+            let { para, mensaje, de } = req.body;
+            let content = {
+                mensaje: mensaje,
+                nombre: de
+            };
+            this.io.to(para).emit('nuevo-mensaje', content);
+            res.status(200).send('');
+            // cuando el cliente quiere emitir un evento
+            // a todos los clientes
+            // Cliente.broadcast.emit('evento',content);
         });
     }
     start() {

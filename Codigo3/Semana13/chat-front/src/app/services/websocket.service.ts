@@ -14,7 +14,7 @@ export class WebsocketService {
   }
   cargarStorage(){
     if(localStorage.getItem('nombre')){
-      this._socket.emit('configurar-usuario',localStorage.getItem('nombre'));
+      this._socket.emit('configurar-usuario', localStorage.getItem('nombre'));
     }
   }
   checkStatus() {
@@ -29,7 +29,7 @@ export class WebsocketService {
   }
   logout(){
     localStorage.removeItem('nombre')
-    this._socket.emit('configurar-usuario','sin-nombre');
+    this._socket.emit('configurar-usuario', 'sin-nombre');
     this._router.navigateByUrl('');
   }
   login(nombre: String) {

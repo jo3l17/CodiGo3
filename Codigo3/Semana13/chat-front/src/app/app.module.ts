@@ -18,8 +18,8 @@ import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-logi
 let configLogin = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('Google-OAuth-Client-Id')
-  },
+    provider: new GoogleLoginProvider('228245834555-8v51o5318dclmk33fd6gm5g1frpfpcr0.apps.googleusercontent.com')
+  },//chat-1558363522274   28245834555-mqao0idep327rse5toin4bgeietp6pp1.apps.googleusercontent.com
   {
     id: FacebookLoginProvider.PROVIDER_ID,
     provider: new FacebookLoginProvider('2775463049191836')
@@ -30,8 +30,9 @@ export function provideConfig() {
   return configLogin;
 }
 
-
-const config: SocketIoConfig = { url: 'http://localhost:3700', options: {} };
+// const config: SocketIoConfig = { url: 'http://localhost:3700', options: {} };
+// const config: SocketIoConfig = { url: 'https://joelvaldez-chat-codigo3.herokuapp.com/', options: {} };
+const config: SocketIoConfig = { url: 'https://chateandox-codigo3.herokuapp.com/', options: {} };
 @NgModule({
   declarations: [
     AppComponent,

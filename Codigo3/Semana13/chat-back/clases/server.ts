@@ -5,6 +5,12 @@ import {Response,Request,NextFunction} from 'express';
 import { Clientes } from './clientes';
 import { Cliente } from './cliente';
 
+interface mensaje{
+    de:string,
+    para:string,
+    mensaje:string
+}
+
 export default class Server {
 
     public app: express.Application;
@@ -27,8 +33,14 @@ export default class Server {
         this.io = socketIO(this.httpServer);
 
         this.puerto = process.env.PORT || 3700;
+        this.configurarBodyParser();
         this.asignarRutas();
         this.escucharSockets()
+    }
+    configurarBodyParser(){
+        var bodyParser = require('body-parser');
+        this.app.use(bodyParser.urlencoded({extended:false}))
+        this.app.use(bodyParser.json());
     }
     escucharSockets(){
         console.log("Ecuchando los sockets");
@@ -62,13 +74,26 @@ export default class Server {
                     mensaje:mensaje,
                     nombre:objCliente.nombre
                 }
-                this.io.emit('nuevo-mensaje',content)
+                this.io.emit('nuevo-mensaje',content);
             });
         });
     }
     asignarRutas(){
-        this.app.use('/',(req,res)=>{
+        
+        this.app.get('/',(req,res)=>{
             res.send("buenas");
+        });
+        this.app.post('/enviar-mensaje',(req,res)=>{
+            let {para,mensaje,de}=req.body;
+            let content = {
+                mensaje:mensaje,
+                nombre:de
+            }
+            this.io.to(para).emit('nuevo-mensaje',content);
+            res.status(200).send('');
+            // cuando el cliente quiere emitir un evento
+            // a todos los clientes
+            // Cliente.broadcast.emit('evento',content);
         })
     }
     start() {
