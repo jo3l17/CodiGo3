@@ -63,7 +63,12 @@ namespace AuthenticationJWT1
                 };
             });
 
-
+            services.AddCors(options =>
+            options.AddPolicy("AllowAPIRequests")
+            builder =>
+            {
+                builder
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -80,6 +85,12 @@ namespace AuthenticationJWT1
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
+            app.UseCors(options =>
+            {
+                options.WithOrigins("https://www.apirequest.io/").WithMethods("*").WithHeaders("*");
+            }
+            );
             app.UseMvc();
         }
     }

@@ -41,6 +41,12 @@ namespace AuthenticationJWT
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
+            app.UseCors(options =>
+            {
+                options.WithOrigins("*");
+            }
+            );
             app.UseMvc();
         }
     }

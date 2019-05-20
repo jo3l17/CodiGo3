@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using AuthenticationJWT1.AuthModels;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace AuthenticationJWT1.Controllers
 {
-
+    [EnableCors("AllowAPIRequest")]
     public class AuthController : ControllerBase
     {
 
@@ -62,7 +63,7 @@ namespace AuthenticationJWT1.Controllers
                 int expiryInMinutes = Convert.ToInt32(_configuration["Jwt:ExpiryInMinutes"]);
 
                 var token = new JwtSecurityToken(
-                  issuer: _configuration["Jwt:Site"],
+                  issuer: _configuration["Jwt:Site"]
                   audience: _configuration["Jwt:Site"],
                   expires: DateTime.UtcNow.AddMinutes(expiryInMinutes),
                   signingCredentials: new SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256)
