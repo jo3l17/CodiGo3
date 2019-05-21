@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Productos from './components/Productos';
 import './App.css';
 
 function App() {
+  let datos = {
+    Titulo: "Titulo de la app",
+    Subtitulo: "nose",
+    visitas: 890
+  }
+  let productos = [
+    {
+      nombre: 'Laptop',
+      precio: 7000
+    }, {
+      nombre: 'CPU',
+      precio: 10000
+    }
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header datos={datos} />
+      <Productos productos={productos}/>
+      <Footer datos={datos} />
     </div>
   );
 }
