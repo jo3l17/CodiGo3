@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="emitir()" class="btn-hamburguesa">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Sistema de Playas</span>
+  <span class="example-spacer"></span>
+  
+  <button mat-button [matMenuTriggerFor]="menu"> <mat-icon>account_circle</mat-icon> {{usuario}}</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="cerrarSesion()">
+      <mat-icon>
+        exit_to_app
+      </mat-icon>
+      Cerrar Sesion</button>
+  </mat-menu>
+</mat-toolbar>
