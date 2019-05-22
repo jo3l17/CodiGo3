@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\BikeStore\BikeStore\bin\Debug\netcoreapp2.2\BikeStore.deps.json
+C:\Users\USER\source\repos\BikeStore\BikeStore\bin\Debug\netcoreapp2.2\BikeStore.runtimeconfig.json
+C:\Users\USER\source\repos\BikeStore\BikeStore\bin\Debug\netcoreapp2.2\BikeStore.runtimeconfig.dev.json
+C:\Users\USER\source\repos\BikeStore\BikeStore\bin\Debug\netcoreapp2.2\BikeStore.dll
+C:\Users\USER\source\repos\BikeStore\BikeStore\bin\Debug\netcoreapp2.2\BikeStore.pdb
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.RazorAssemblyInfo.cache
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.RazorAssemblyInfo.cs
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.AssemblyInfo.cs
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.RazorTargetAssemblyInfo.cache
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.dll
+C:\Users\USER\source\repos\BikeStore\BikeStore\obj\Debug\netcoreapp2.2\BikeStore.pdb
