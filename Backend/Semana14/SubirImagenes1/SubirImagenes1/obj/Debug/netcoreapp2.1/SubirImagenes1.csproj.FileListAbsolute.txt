@@ -1,0 +1,14 @@
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\bin\Debug\netcoreapp2.1\SubirImagenes1.deps.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\bin\Debug\netcoreapp2.1\SubirImagenes1.runtimeconfig.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\bin\Debug\netcoreapp2.1\SubirImagenes1.runtimeconfig.dev.json
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\bin\Debug\netcoreapp2.1\SubirImagenes1.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\bin\Debug\netcoreapp2.1\SubirImagenes1.pdb
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.csprojAssemblyReference.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.csproj.CoreCompileInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.RazorAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.RazorAssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.AssemblyInfoInputs.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.AssemblyInfo.cs
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.RazorTargetAssemblyInfo.cache
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.dll
+C:\Users\Tecsup\Documents\GitHub\CodiGo3\Backend\Semana14\SubirImagenes1\SubirImagenes1\obj\Debug\netcoreapp2.1\SubirImagenes1.pdb
