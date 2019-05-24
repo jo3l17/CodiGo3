@@ -18,13 +18,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     if (this._sAuth.isLogged()) {
-      this._sRouter.navigateByUrl('logged/playas');
+      this._sRouter.navigateByUrl('/logged');
     }
   }
 
   login() {
     this._sAuth.login(this.objUsuario).subscribe((respuesta) => {
-      if (respuesta.message == 'ok' && respuesta.token) {
+      if (respuesta.token) {
         this._sAuth.saveToken(respuesta.token);
         if (this._sAuth.isLogged()) {
         this._sRouter.navigateByUrl('/logged');

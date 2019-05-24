@@ -14,7 +14,7 @@ export class AuthService {
     this.getToken();
   }
   isLogged(){
-    let userDetails =this.getUserDetails();
+    let userDetails = this.getUserDetails();
     if (userDetails) {
       let ahora = Date.now()/1000
       if(JSON.parse(userDetails).exp> ahora){
@@ -28,18 +28,18 @@ export class AuthService {
   }
   getToken(){
     if(!this.token){
-      this.token = localStorage.getItem("token");
+      this.token = localStorage.getItem('token');
     }
   }
-  login(objUsuario):Observable<any>{
+  login(objUsuario): Observable<any>{
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this._http.post('http://localhost:3000/api/auth/login',
+    return this._http.post('http://localhost:3500/auth/login',
                                     objUsuario,{headers:headers});
   }
 
   logout(){
     this.token = null;
-    localStorage.removeItem("token");
+    localStorage.removeItem('token');
     this._router.navigateByUrl('');
   }
 

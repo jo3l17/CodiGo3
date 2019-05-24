@@ -5,19 +5,25 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { MaterialModule } from '../material.module';
-import { PlayasComponent } from './components/playas/playas.component';
+import { CreateComponent } from './components/create/create.component';
+import { RemoveComponent } from './components/remove/remove.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+// For MDB Angular Free
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md'
 
-import { AgmCoreModule } from '@agm/core';
+// import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
-  declarations: [ToolbarComponent, SidenavComponent, MainContentComponent, PlayasComponent],
+  declarations: [ToolbarComponent, SidenavComponent, MainContentComponent, CreateComponent, RemoveComponent, UsuariosComponent],
   imports: [
     CommonModule,
     LoggedRoutingModule,
     MaterialModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBzh23_Ka5AqoOOaFHq3cArxIf2mCC_MLg'
-    })
+    ChartsModule,
+    WavesModule
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyBzh23_Ka5AqoOOaFHq3cArxIf2mCC_MLg'
+    // })
   ]
 })
 export class LoggedModule { }

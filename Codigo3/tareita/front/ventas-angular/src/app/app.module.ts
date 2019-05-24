@@ -10,6 +10,9 @@ import { LoginComponent } from './screens/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// For MDB Angular Free
+import { ChartsModule } from 'angular-bootstrap-md';
 
 
 
@@ -26,7 +29,9 @@ import {HttpClientModule} from '@angular/common/http';
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot(),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
