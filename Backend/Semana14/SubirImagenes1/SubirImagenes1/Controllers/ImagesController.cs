@@ -34,7 +34,7 @@ namespace SubirImagenes1.Controllers
 
         // POST api/values
         [HttpPost]
-        public async Task<ActionResult> Post(IFormFile archivo)
+        public async Task<ActionResult> Post(IFormFile imagen, string email)
         {
             Usuario usuario = new Usuario();
             usuario.nombre = "Joel";
@@ -42,7 +42,7 @@ namespace SubirImagenes1.Controllers
 
             using (var memoryStream = new MemoryStream())
             {
-                archivo.CopyTo(memoryStream);
+                imagen.CopyTo(memoryStream);
                 usuario.imagen = memoryStream.ToArray();
             }
             await context.Usuarios.AddAsync(usuario);
