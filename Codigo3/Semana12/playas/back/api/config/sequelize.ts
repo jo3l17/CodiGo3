@@ -6,7 +6,7 @@ import {slotPlaya_model} from './../models/slotplaya';
 import {usuario_model} from '../models/usuario';
 const Sequelize = require('sequelize');
 
-export const sequelize = new Sequelize('playas','root','Virtu@l',{
+export const sequelize = new Sequelize('playas','root','root',{
     host:'localhost',
     dialect: 'mysql',
     timezone:'-05:00'

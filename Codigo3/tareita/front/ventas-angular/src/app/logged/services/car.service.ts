@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PlayaService {
+export class CarService {
   get(arg0: string) {
     throw new Error("Method not implemented.");
   }
@@ -17,5 +17,8 @@ export class PlayaService {
 
   getPlayas(){
     return this._http.get('http://localhost:3000/api/playa')
+  }
+  getAutos(){
+    return this._http.get('http://localhost:3500/api/car')
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarService } from '../../services/car.service';
 
 @Component({
   selector: 'app-create',
@@ -8,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 
 export class CreateComponent implements OnInit {
   public chartType: string = 'bar';
-  constructor() { }
-
+  
+  constructor(private _sCar:CarService) { }
+  playas;
+  playasList;
   ngOnInit() {
+  }
+  setPlayasList(){
+    
+    this._sCar.getPlayas().subscribe((carros:any)=>{
+      // iterando el contenido de las playas [content]
+      carros.content.forEach((playa)=>{
+        // 'playa' => es un elemento playa
+        // creamos 3 variables en cada iteracion (para cada playa)
+        let total,libres,ocupados = 0;
+        // calculamos el total del arreglo de nombre t_slotplayas de cada elemento
+        total = playa.t_slotplayas.length;
+        // calculamos el total de slots libre
+        libres = playa.t_slotplayas.filter(slot=>slot.slotp_est==0).length;
+        // calculamos el total de slots ocupados
+        ocupados = playa.t_slotplayas.filter(slot=>slot.slotp_est==1).length;
+        // asignando 3 nuevas propiedades al objeto playa
+        playa.tot = total;
+        playa.lib = libres;
+        playa.ocu = ocupados;
+      });
+      this.playasList = carros.content;
+      console.log(this.playasList);
+    });
   }
 
   public chartDatasets: Array<any> = [
@@ -46,4 +72,6 @@ export class CreateComponent implements OnInit {
   };
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }
+
+  
 }

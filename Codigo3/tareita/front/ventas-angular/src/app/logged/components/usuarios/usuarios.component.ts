@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { PlayaService } from '../../services/playa.service';
+import { CarService } from '../../services/car.service';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
@@ -47,7 +47,7 @@ export class UsuariosComponent implements OnInit {
 
   displayedColumns: string[] = ['playa_id', 'playa_nom', 'tot', 'lib', 'ocu'];
   playas;
-  constructor(private _sPlaya: PlayaService) {
+  constructor(private _sPlaya: CarService) {
     
   }
   

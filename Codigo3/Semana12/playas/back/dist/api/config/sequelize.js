@@ -7,7 +7,7 @@ const registro_1 = require("./../models/registro");
 const slotplaya_1 = require("./../models/slotplaya");
 const usuario_1 = require("../models/usuario");
 const Sequelize = require('sequelize');
-exports.sequelize = new Sequelize('playas', 'root', 'Virtu@l', {
+exports.sequelize = new Sequelize('playas', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql',
     timezone: '-05:00'

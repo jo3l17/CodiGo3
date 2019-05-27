@@ -4,8 +4,14 @@ import {usuario_model} from '../models/usuario';
 
 const Sequelize = require('sequelize');
 
-export const sequelize = new Sequelize('vautos','root','Virtu@l',{
-    host:'localhost',
+// export const sequelize = new Sequelize('vautos','root','Virtu@l',{
+//     host:'localhost',
+//     dialect: 'mysql',
+//     timezone:'-05:00'
+// })
+
+export const sequelize = new Sequelize('NJdYCOsn8Q','NJdYCOsn8Q','4MhyeZxzKi',{
+    host:'remotemysql.com',
     dialect: 'mysql',
     timezone:'-05:00'
 })
