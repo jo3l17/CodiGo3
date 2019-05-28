@@ -13,4 +13,7 @@ exports.usuarioSchema = new Schema({
             operador: String
         }
     ]
-});
+}, { versionKey: false });
+exports.usuarioSchema.methods.nombreApellido = function () {
+    return this.usu_nom + " " + this.usu_ape;
+};
