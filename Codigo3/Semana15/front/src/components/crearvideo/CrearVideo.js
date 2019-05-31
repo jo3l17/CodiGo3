@@ -183,7 +183,7 @@ export default class CrearVideo extends Component {
                     }}
                     helperText="Please select your currency"
                     margin="normal"
-                    value={'EUR'}
+                    value={'EUR '}
                 >
                     {this.currencies.map(option => (
                         <option key={option.value} value={option.value}>

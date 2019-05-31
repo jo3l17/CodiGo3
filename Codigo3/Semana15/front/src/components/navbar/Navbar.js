@@ -20,6 +20,7 @@ import Home from './../home/Home';
 import Nosotros from './../nosotros/Nosotros';
 import Videos from './../videos/Videos';
 import CrearVideo from '../crearvideo/CrearVideo';
+import CrearVideoV2 from '../crearvideov2/CrearVideoV2';
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -69,20 +70,11 @@ function Navbar(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-          <ListItem button component={Link} to="/">
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary={"Mi link"} />
-          </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem button component={Link} to="/nosotros">
+        <ListItem button component={Link} to="/">
           <ListItemIcon>
-            <MailIcon />
+            <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary={"Segundo Link"} />
+          <ListItemText primary={"Mi link"} />
         </ListItem>
       </List>
       <List>
@@ -90,7 +82,25 @@ function Navbar(props) {
           <ListItemIcon>
             <MailIcon />
           </ListItemIcon>
-          <ListItemText primary={"tercer Link"} />
+          <ListItemText primary={"Videos"} />
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
+        <ListItem button component={Link} to="/nosotros">
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <ListItemText primary={"Nosotros"} />
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
+        <ListItem button component={Link} to="/forms">
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <ListItemText primary={"ejemplo forms"} />
         </ListItem>
       </List>
     </div>
@@ -153,7 +163,8 @@ function Navbar(props) {
             <Route exact path="/" component={Home} />
             <Route exact path="/nosotros" component={Nosotros} />
             <Route exact path="/video" component={Videos} />
-            <Route exact path="/crearvideo" component={CrearVideo} />
+            <Route exact path="/crearvideo" component={CrearVideoV2} />
+            <Route exact path="/forms" component={CrearVideo} />
           </Switch>
         </main>
       </div>
