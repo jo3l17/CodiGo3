@@ -11,8 +11,7 @@ exports.videoSchema = new Schema({
         {
             usu_nom: String,
             usu_email: {
-                type: String,
-                unique: true
+                type: String
             }
         }
     ],

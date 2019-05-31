@@ -18,6 +18,8 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './../home/Home';
 import Nosotros from './../nosotros/Nosotros';
+import Videos from './../videos/Videos';
+import CrearVideo from '../crearvideo/CrearVideo';
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -83,6 +85,14 @@ function Navbar(props) {
           <ListItemText primary={"Segundo Link"} />
         </ListItem>
       </List>
+      <List>
+        <ListItem button component={Link} to="/video">
+          <ListItemIcon>
+            <MailIcon />
+          </ListItemIcon>
+          <ListItemText primary={"tercer Link"} />
+        </ListItem>
+      </List>
     </div>
   );
 
@@ -142,6 +152,8 @@ function Navbar(props) {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/nosotros" component={Nosotros} />
+            <Route exact path="/video" component={Videos} />
+            <Route exact path="/crearvideo" component={CrearVideo} />
           </Switch>
         </main>
       </div>
