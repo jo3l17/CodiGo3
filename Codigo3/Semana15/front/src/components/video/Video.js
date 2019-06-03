@@ -67,7 +67,7 @@ export default function Video({video}) {
             />
             <CardMedia
                 className={classes.media}
-                image="http://placehold.it/300x300"
+                image="http://localhost:3700/images/erMgUKJDSq-Dz0ffVU4yVENb.jpg"
                 title={video.vid_link}
             />
             <CardContent>

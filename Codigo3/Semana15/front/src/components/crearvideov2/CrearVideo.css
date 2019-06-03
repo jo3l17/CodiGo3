@@ -1,0 +1,12 @@
+.textField {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+.formulario{
+    display:flex;
+    flex-wrap: wrap;
+}
+Button[type="submit"]{
+    margin-top: 20px;
+}

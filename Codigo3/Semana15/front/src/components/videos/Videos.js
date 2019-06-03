@@ -47,7 +47,7 @@ export default class Videos extends Component {
                             videos.map(video => (<Video key={video._id} video={video} />))
                         }
                     </Grid>
-                        <Fab color="primary" aria-label="Add" component={Link} to='/crearvideo' style={{position:'absolute',bottom:'30px',right:'30px'}}>
+                        <Fab color="primary" aria-label="Add" component={Link} to='/crearvideo' style={{position:'fixed',bottom:'30px',right:'30px'}}>
                         <Icon>add_icon</Icon>
                         </Fab>
                     
