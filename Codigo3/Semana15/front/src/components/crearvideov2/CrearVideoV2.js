@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import './CrearVideo.css'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
 export default class CrearVideoV2 extends Component {
 
-    
+
     nomRef;
     descRef;
     linkRef;
@@ -19,20 +20,21 @@ export default class CrearVideoV2 extends Component {
         this.descRef = React.createRef();
         this.linkRef = React.createRef();
         this.videoRef = React.createRef();
-        this.state={
-            open:false
+        this.state = {
+            open: false,
+            idVideoCreado: 0
         }
     }
-    
-    handleClick() {
+
+    handleClick = () => {
         // this.setOpen(true);
         this.setState({
             open: true
         })
     }
-    handleClose(event, reason) {
+    handleClose = (event, reason) => {
         if (reason === 'clickaway') {
-        return;
+            return;
         }
         // this.setOpen(false);
         this.setState({
@@ -42,6 +44,7 @@ export default class CrearVideoV2 extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        let formulario = e.target;
         let objVideo = {
             vid_titu: this.nomRef.value,
             vid_desc: this.descRef.value,
@@ -77,15 +80,51 @@ export default class CrearVideoV2 extends Component {
                     .then(data2 => {
                         if (data2.message === "updated") {
                             // console.log(data2);
-                            e.target.reset();
-                            this.setState({open:true});
-                            // this.handleClick()
+                            formulario.reset();
+                            // e.target.reset();
+                            // this.setState({ open: true });
+                            this.handleClick();
+                            this.setState({
+                                idVideoCreado: data2.content._id
+                            })
                         } else {
                             console.log("Error");
                         }
                     })
             }
         })
+    }
+    // handleUndo = () => {
+    //     let headers = {
+    //         method: 'POST'
+    //     };
+    //     fetch(`http://localhost:3700/api/video/delete/${this.state.idVideoCreado}`, headers)
+    //         .then(respuestaDeshacer => {
+    //             return respuestaDeshacer.json();
+    //         })
+    //         .then(data3 => {
+    //             if (data3.message === "borrado") {
+    //                 this.handleClose();
+    //             } else {
+    //                 console.log("Error")
+    //             }
+    //         })
+    // }
+    handleUndo = () => {
+        let headers = {
+            method: 'DELETE'
+        };
+        fetch(`http://localhost:3700/api/video/${this.state.idVideoCreado}`, headers)
+            .then(respuesta => {
+                return respuesta.json();
+            })
+            .then(data => {
+                if (data.message === "borrado") {
+                    this.handleClose();
+                } else {
+                    console.log("Error")
+                }
+            })
     }
 
 
@@ -130,32 +169,41 @@ export default class CrearVideoV2 extends Component {
                     </Button>
                 </form>
                 <Snackbar
+                    // style={{
+                    //     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+                    //     borderRadius: 3,
+                    //     border: 0,
+                    //     color: 'white',
+                    //     height: 48,
+                    //     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+                    // }}
                     anchorOrigin={{
                         vertical: 'bottom',
                         horizontal: 'left',
                     }}
                     open={this.state.open}
-                    autoHideDuration={6000}
-                    // onClose={this.handleClose}
-                    onClose={()=>{this.setState({open:false})}}
+                    autoHideDuration={8000}
+                    onClose={this.handleClose}
+                    // onClose={()=>{this.setState({open:false})}}
                     ContentProps={{
                         'aria-describedby': 'message-id',
                     }}
-                    message={<span id="message-id">subido</span>}
+                    message={<span id="message-id">Video Subido Exitosamente</span>}
                     action={[
-                        // <Button key="undo" color="secondary" size="small" onClick={this.handleClose}
-                        <Button key="undo" color="secondary" size="small" onClick={()=>{this.setState({open:false})}}>
-                            UNDO
+                        // <Button key="undo" color="secondary" size="small" onClick={()=>{this.setState({open:false})}}>
+                        <Button key="undo" color="secondary" size="small" onClick={this.handleUndo}>
+                            Deshacer
                         </Button>,
                         <IconButton
                             key="close"
                             aria-label="Close"
                             color="inherit"
                             style={{
-                                padding: 0.5}}
+                                padding: 0.5
+                            }}
                             // className={classes.close}
-                            // onClick={this.handleClose}
-                            onClick={()=>{this.setState({open:false})}}
+                            onClick={this.handleClose}
+                        // onClick={()=>{this.setState({open:false})}}
                         >
                             <CloseIcon />
                         </IconButton>,
