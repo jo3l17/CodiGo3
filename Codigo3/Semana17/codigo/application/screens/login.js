@@ -1,18 +1,39 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Alert } from 'react-native'
 import BackGroundImage from '../components/BackGroundImage';
 import { Card } from 'react-native-elements';
 import AppButton from '../components/AppButton';
+import * as firebase from 'firebase';
 import t from 'tcomb-form-native';
+
 var Form = t.form.Form;
 
 export default class Login extends Component {
+    static navigationOptions={
+        title:'Ingresa',
+        headerTitleStyle:{
+            textAlign:'center',
+            alignSelf:'center',
+            fontSize:20,
+            color:'#fff',
+            fontWeight:'bold',
+            flex:1,
+            marginLeft:-15
+        }
+    }
     validador;
 
     iniciarSesion=()=>{
         var value=this.refs.form.getValue();
         if(value){
             console.log(value);
+            firebase.auth().signInWithEmailAndPassword(value.email,value.password)
+            .then(()=>{
+                Alert.alert("Exito!","Inicio de sesion exitoso");
+            }).catch((error)=>{
+                Alert.alert("Error","contraseña  o email invalidos")
+                console.log(error)
+            })
         }else{
             console.log(value);
             

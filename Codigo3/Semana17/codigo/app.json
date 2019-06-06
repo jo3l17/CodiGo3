@@ -23,7 +23,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier":"com.va.codigoplaya"
+    },
+    "android":{
+      "package":"com.va.codigoplaya"
+    },
+    "description": "Aplicacion de Indexacion de Playitas de Estacionamiento"
   }
 }

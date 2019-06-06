@@ -1,4 +1,4 @@
-export var firebaseConfig = {
+export default firebaseConfig = {
     apiKey: "AIzaSyAMMK17ef8e57T9V7RJ9UaBPM13KeOuPuw",
     authDomain: "exporeactnative-33612.firebaseapp.com",
     databaseURL: "https://exporeactnative-33612.firebaseio.com",
