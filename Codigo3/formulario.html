@@ -18,6 +18,34 @@
                 <input type="text" class="form-control" id="rest_rSocial" placeholder="Nombre">
             </div>
             <div class="form-group">
+                <label for="exampleInputEmail1">Direccion</label>
+                <input type="text" class="form-control" id="rest_direccion" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">referencia de ubicacion</label>
+                <input type="text" class="form-control" id="rest_refUbicacion" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">telefono</label>
+                <input type="text" class="form-control" id="rest_telefono" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">info</label>
+                <input type="text" class="form-control" id="rest_info" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Dias de atencion</label>
+                <input type="text" class="form-control" id="rest_dAtencion" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">hora de apertura</label>
+                <input type="text" class="form-control" id="rest_hApertura" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">hora de cierre</label>
+                <input type="text" class="form-control" id="rest_hCierre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
                 <label for="exampleInputEmail1">latitud</label>
                 <input type="text" readonly class="form-control" id="rest_lat" placeholder="latitud">
             </div>
@@ -41,6 +69,13 @@
         let contenedor = document.getElementById("contenedor")
         let rest_img = document.getElementById("rest_img")
         let rest_rSocial = document.getElementById("rest_rSocial")
+        let rest_direccion = document.getElementById("rest_direccion")
+        let rest_refUbicacion = document.getElementById("rest_refUbicacion")
+        let rest_telefono = document.getElementById("rest_telefono")
+        let rest_info = document.getElementById("rest_info")
+        let rest_hCierre = document.getElementById("rest_hCierre")
+        let rest_hApertura = document.getElementById("rest_hApertura")
+        let rest_dAtencion = document.getElementById("rest_dAtencion")
         let obtenerCoords = () => {
             if (navigator.geolocation) {
                 navigator.geolocation.watchPosition((pos) => {
@@ -64,85 +99,33 @@
             formData.append('rest_img',
                 rest_img.files[0],
                 rest_img.files[0].name);
-            formData.append('rest_rSocial',rest_rSocial.value,'rest_rSocial')
-            formData.append('rest_direccion','av colesterol','rest_rSocial')
-            formData.append('rest_telefono','232425','rest_rSocial')
-            formData.append('rest_lat',rest_lat.value,'rest_rSocial')
-            formData.append('rest_lng',rest_lng.value,'rest_rSocial')
-            formData.append('rest_refUbicacion','cerca a la plaza de armas','rest_rSocial')
-            formData.append('rest_dAtencion','Lun,Mar,Mier','rest_rSocial')
-            formData.append('rest_hApertura','12:00','rest_hApertura')
-            formData.append('rest_hCierre','12:00','rest_hCierre')
-            formData.append('rest_avisos','prueba','rest_avisos')
-            formData.append('rest_estado',1,'rest_estado')
-            formData.append('rest_verificacion',0,'restverificacion')
-            formData.append('usu_id',1,'usu_id')
-            console.log(formData)
+            formData.append('rest_rSocial', rest_rSocial.value)
+            formData.append('rest_direccion', rest_direccion.value)
+            formData.append('rest_telefono', rest_telefono.value)
+            formData.append('rest_lat', rest_lat.value)
+            formData.append('rest_lng', rest_lng.value)
+            formData.append('rest_info', rest_info.value)
+            formData.append('rest_refUbicacion', rest_refUbicacion.value)
+            formData.append('rest_dAtencion', rest_dAtencion.value)
+            formData.append('rest_hApertura', rest_hApertura.value )
+            formData.append('rest_hCierre', rest_hCierre.value)
+            formData.append('rest_avisos', 'prueba')
+            formData.append('rest_estado', 1)
+            formData.append('rest_verificacion', 0)
+            formData.append('usu_id', 1)
             let headersRest = {
-                    method: 'POST',
-                    body: formData
-                };
-            fetch('https://huariquesback.herokuapp.com/api/restaurante/crear',headersRest)
-            .then(response=>{
-                console.log("exito1")
-                return response.json();
-            }).then(data=>{
-                console.log("exito")
-            })
-
-            document.getElementById("FormRest").reset();
-        }
-        handleSubmit = (e) => {
-            e.preventDefault();
-            let formulario = e.target;
-            let objVideo = {
-                vid_titu: this.nomRef.value,
-                vid_desc: this.descRef.value,
-                vid_link: this.linkRef.value,
-            }
-            let headers = {
                 method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(objVideo)
+                body: formData
             };
-            console.log(this.videoRef.current.files[0]);
-            // crear una variable en codigo
-            var formData = new FormData();
-            formData.append('archivo',
-                this.videoRef.current.files[0],
-                this.videoRef.current.files[0].name);
+            fetch('https://huariquesback.herokuapp.com/api/restaurante/crear', headersRest)
+                .then(response => {
+                    console.log(response)
+                    return response.json();
+                }).then(data => {
+                    console.log(data);
+                    document.getElementById("FormRest").reset();
+                })
 
-            fetch('http://localhost:3700/api/video', headers).then(response => {
-                return response.json();
-            }).then(data => {
-                if (data.message === 'created') {
-                    let headersVideo = {
-                        method: 'POST',
-                        body: formData
-                    };
-                    fetch(`http://localhost:3700/api/video/upload/${data.content._id}`, headersVideo)
-                        .then(response2 => {
-                            return response2.json();
-                        })
-                        .then(data2 => {
-                            if (data2.message === "updated") {
-                                // console.log(data2);
-                                formulario.reset();
-                                // e.target.reset();
-                                // this.setState({ open: true });
-                                this.handleClick();
-                                this.setState({
-                                    idVideoCreado: data2.content._id
-                                })
-                            } else {
-                                console.log("Error");
-                            }
-                        })
-                }
-            })
         }
     }
 </script>
