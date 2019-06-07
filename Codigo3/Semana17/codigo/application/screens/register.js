@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, ScrollView } from 'react-native'
+import { Text, View,StyleSheet, ScrollView } from 'react-native'
 import BackGroundImage from '../components/BackGroundImage';
 
 import * as firebase from 'firebase';
@@ -152,9 +152,9 @@ export default class Register extends Component {
 
         return (
             <BackGroundImage source={require('../../assets/BgBlack.jpg')}>
-                <ScrollView>
-                {/* <View> */}
-                    <Card title="Registrarsee" wrapperStyle={{ paddingLeft: 10,height:600}}>
+                <ScrollView style={estilos.scroll}>
+                <View style={estilos.container}>
+                    <Card containerStyle={estilos.card} title="Registrarsee" wrapperStyle={{ paddingLeft: 10,height:600}}>
                         <Form value={this.state.credentials} ref="form" type={User} options={options} onChange={(data)=>{this.guardarState(data)}}/>
                         <AppButton
                         bgColor={'rgba(111,38,74,0.7)'}
@@ -167,9 +167,27 @@ export default class Register extends Component {
                         
                     />
                     </Card>
-                {/* </View> */}
+                </View>
                 </ScrollView>
             </BackGroundImage>
         )
     }
 }
+var estilos = StyleSheet.create({
+    container:{
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignContent:'center',
+        height:'100%'
+    },
+    card:{
+        width:'90%',
+        borderRadius:10,
+        marginBottom:20,
+    },
+    scroll:{
+        paddingVertical:20,
+        marginBottom:20
+    }
+})

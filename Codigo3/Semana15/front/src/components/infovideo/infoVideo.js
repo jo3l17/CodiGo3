@@ -12,17 +12,19 @@ export default class infoVideo extends Component {
         // console.log(props.match.params.id);
         this.state = {
             value:0,
-            info:[{usu_nom:"nose"},{usu_email:"nel"}]
+            info:[],
+            cargado:false,
         }
     }
-    async componentDidMount() {
-        await fetch(`http://localhost:3700/api/video/${this.props.match.params.id}`)
+    componentDidMount() {
+        fetch(`http://localhost:3700/api/video/${this.props.match.params.id}`)
             .then(response => {
                 return response.json()
             }).then(data => {
                 console.log(data.content)
                 this.setState({
-                    info:data.content
+                    info:data.content,
+                    cargado:true,
                 })
             })
     }
@@ -40,29 +42,33 @@ export default class infoVideo extends Component {
     }
 
     render() {
-        let { info } = this.state;
-        return (
-            <React.Fragment>
-                <div>
-                    #Queda!
-                <hr />
-                    {this.props.match.params.id}
-                    <iframe title={this.props.match.params.id} width="1650" height="600" src={info.vid_link}></iframe>
-                </div>
-                <div style={{flexGrow: 1,
-                    backgroundColor: "#64ff80"}}>
-                    <AppBar position="static">
-                        <Tabs 
-                        value={this.state.value}
-                        onChange={this.handleChange}>
-                            <Tab label="Comentarios" />
-                            <Tab label="Likes" />
-                        </Tabs>
-                    </AppBar>
-                    {this.state.value === 0 && <TabContainer data={info}/>}
-                    {this.state.value === 1 && <TabContainer data={info}/>}
-                </div>
-            </React.Fragment>
-        )
+        let { info, cargado } = this.state;
+        if(cargado){
+            return (
+                <React.Fragment>
+                    <div>
+                        #Queda!
+                    <hr />
+                        {this.props.match.params.id}
+                        <iframe title={this.props.match.params.id} width="1200" height="600" src={info.vid_link}></iframe>
+                    </div>
+                    <div style={{flexGrow: 1,
+                        backgroundColor: "#ffffff"}}>
+                        <AppBar position="static">
+                            <Tabs 
+                            value={this.state.value}
+                            onChange={this.handleChange}>
+                                <Tab label="Comentarios" />
+                                <Tab label="Likes" />
+                            </Tabs>
+                        </AppBar>
+                        {this.state.value === 0 && <TabContainer state={this.state.value} data={info.vid_coments}/>}
+                        {this.state.value === 1 && <TabContainer state={this.state.value} data={info.vid_likes}/>}
+                    </div>
+                </React.Fragment>
+            )
+        }else{
+            return (<label>cargando...</label>)
+        }
     }
 }

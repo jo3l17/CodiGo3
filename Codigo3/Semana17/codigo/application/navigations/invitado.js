@@ -12,7 +12,10 @@ const AppNavigator=createStackNavigator(
             screen:LoginScreen
         },
         miRegister:{
-            screen:RegisterScreen
+            screen:RegisterScreen,
+            navigationOptions:{
+                header:null
+            }
         }
     },
     {

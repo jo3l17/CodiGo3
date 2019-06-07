@@ -10,6 +10,7 @@ import PreLoader from './application/components/PreLoader';
 
 import { Text } from 'react-native-elements';
 import Playas from './application/screens/playa/Playas';
+import Logged from './application/navigations/logged';
 // inicializar la conexion a nuestra base de datos
 firebase.initializeApp(firebaseConfig)
 
@@ -44,7 +45,7 @@ export default class App extends React.Component {
       return(<PreLoader/>)
     }
     if (isLogged) {
-      return (<Playas/>)
+      return (<Logged/>)
     } else {
       return (
         <Invitado />
