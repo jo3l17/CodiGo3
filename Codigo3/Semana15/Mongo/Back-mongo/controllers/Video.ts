@@ -87,11 +87,12 @@ export var video_controller = {
         let { id } = req.params;
         Video.findById(id, (err, objVideo) => {
             if (!err) {
-                res.status(200).json({ message: 'borrado', content: objVideo })
+                res.status(200).json({ message: 'borrado', content: objVideo });
             } else {
                 res.status(500).json({ message: 'error al borrar el video', error: err })
             }
-        }
+        })
+    }
     // create: (req: Request, res: Response) => {
     //     let objVideo: any = new Video();
     //     objVideo = req.body;
