@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 
 import { Text, View, FlatList } from 'react-native'
 import { ListItem } from 'react-native-elements';
+import {NavigationActions} from 'react-navigation';
 
 import * as firebase from 'firebase';
 import BackGroundImage from '../../components/BackGroundImage';
 import PlayaEmpty from '../../components/playa/PlayaEmpty';
 
 import PreLoader from '../../components/PreLoader';
+import PlayaAddButton from '../../components/playa/PlayaAddButton';
 
 export default class Playas extends Component {
 
@@ -18,7 +20,7 @@ export default class Playas extends Component {
             cargado: false,
             playas: []
         }
-        this.refPlayas = firebase().ref().Child('playas');
+        this.refPlayas = firebase.database().ref().child('playas');
     }
     componentDidMount() {
         this.refPlayas.on('value', (data) => {
@@ -28,6 +30,7 @@ export default class Playas extends Component {
                     id: playa.key,
                     nombre: playa.val().nombre,
                     capacidad: playa.val().capacidad,
+                    direccion: playa.val().direccion,
                     lat: playa.val().lat,
                     lng: playa.val().lng
                 };
@@ -39,7 +42,17 @@ export default class Playas extends Component {
             })
         })
     }
-    rederItems(item){
+
+    detallePlaya=()=>{
+        const navegador = NavigationActions.navigate({
+            routeName: 'miDetallePlayaScreen',
+            params:{
+                playa:playa
+            }
+        });
+        this.props.navigation.dispatch(navegador);
+    }
+    renderItems(item){
         return(
             <ListItem   roundAvatar
                         title={`Playa ${item.nombre}`}
@@ -51,9 +64,14 @@ export default class Playas extends Component {
                                     color:'white'}}
                                     titleStyle={{color:'white'}}
                                     containerStyle={{padding:5,
-                                    backgroundColor:'rgba(206,206,206,0.6)'}}>
+                                    backgroundColor:'rgba(206,206,206,0.6)'}}
+                                    onPress={this.detallePlaya(item)}
+                                    >
             </ListItem>
         )
+    }
+    formularioPlaya=()=>{
+        this.props.navigation.navigate('miAgregarPlayasScreen')
     }
     render() {
         let { playas, cargado } = this.state;
@@ -71,6 +89,7 @@ export default class Playas extends Component {
                                         return data.id
                                     }}>
                         </FlatList>
+                        <PlayaAddButton formularioPlaya={this.formularioPlaya}/>
                     </BackGroundImage>)
             } else {
                 return (
